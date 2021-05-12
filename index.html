@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selection Function</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background-color: black;
+    }
+
+    #sec {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    #window {
+        width: 30rem;
+        height: 30rem;
+        background-color: #333;
+        border: 2px solid rgb(255, 255, 255);
+        border-radius: 1rem;
+        display: flex;
+        /* justify-content: space-evenly; */
+        align-items: center;
+        flex-direction: column;
+        position: absolute;
+    }
+
+    #ContainsText {
+        width: 100%;
+        height: 24rem;
+        /* background-color: blanchedalmond; */
+        border-radius: 0.9rem;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .texts {
+        font: caption;
+        width: 80%;
+        border-radius: 2rem;
+        border: 1px solid rgb(255, 255, 255);
+        height: 2rem;
+        /* background-color: rgb(105, 71, 71); */
+        font-size: 1.1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-weight: 600;
+        cursor: pointer;
+        transition: 0.5s;
+        user-select: none;
+        box-shadow: 0px 0px 12px 1px black;
+    }
+
+    #btn {
+        width: 50%;
+        height: 3rem;
+        color: rgb(255, 255, 255);
+        font: caption;
+        font-size: 2rem;
+        font-weight: 700;
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+        border: 1px solid rgb(184, 178, 178);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 3rem;
+        transition: 0.5s 0.5s;
+        box-shadow: 0px 0px 12px 1px black;
+    }
+
+    #btn2 {
+        width: 30%;
+        height: 1.5rem;
+        color: rgb(255, 255, 255);
+        font: caption;
+        font-size: 1rem;
+        font-weight: 700;
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+        border: 1px solid rgb(184, 178, 178);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 3rem;
+        transition: 0.5s 0.5s;
+        box-shadow: 0px 0px 12px 1px rgb(95, 95, 95);
+    }
+
+    #btn3 {
+        width: 30%;
+        height: 1.5rem;
+        color: rgb(255, 255, 255);
+        font: caption;
+        font-size: 1rem;
+        font-weight: 700;
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+        border: 1px solid rgb(184, 178, 178);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 3rem;
+        transition: 0.5s 0.5s;
+        box-shadow: 0px 0px 12px 1px rgb(95, 95, 95);
+    }
+
+    #btns {
+        width: 100%;
+        height: 2rem;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    #h1 {
+        color: white;
+        width: 93%;
+        height: 5rem;
+        border: 2px solid rgb(255, 255, 255);
+        border-top: none;
+        border-radius: 1rem;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font: caption;
+        font-size: 1.3rem;
+        font-weight: 700;
+        box-shadow: 0px 0px 12px 1px black inset, 0px 0px 203px 1px rgba(0, 0, 0, 0.123) inset;
+    }
+
+    @media screen and (max-width: 500px) {
+        #window {
+            width: 90%;
+        }
+    }
+</style>
+
+<body>
+    <div id="sec">
+        <div id="window">
+            <h1 id="h1">Where is Taj Mahal located? </h1>
+            <div id="ContainsText">
+                <p class="texts" id="text1">Delhi</p>
+                <p class="texts" id="text2">Agra</p>
+                <p class="texts" id="text3">Mathura</p>
+                <button id="btn">Submit</button>
+                <div id="btns"><button id="btn3">Back</button>
+                    <button id="btn2">Next</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let text1 = document.getElementById("text1");
+        let text2 = document.getElementById("text2");
+        let text3 = document.getElementById("text3");
+        let as = document.getElementById("window");
+        let btn = document.getElementById("btn");
+        let btn2 = document.getElementById("btn2");
+        let h1 = document.getElementById("h1");
+        let myObj = [text1, text2, text3];
+        let myobj2 = ["Where is Taj Mahal located? ", "What is a Cat?", "Which OS Installed in Microsoft Computers?", "Who is the first President of India?", "RAM Full form?", "GK Full Form?"];
+        let optionsA = ["Delhi", "Alien", "Windows", "APJ Abdul Kalam", "Read A Memory", "Great Knowledge"];
+        let optionsB = ["Agra", "Human", "Android", "Dr. Rajendra Prashad", "Random-access memory", "General Knowledge"];
+        let optionsC = ["Mathura", "Animal", "iOS", "Dr. B.R. Ambedkar", "Random-Anti Memory", "Gaming Knowledge"];
+        let answers = [text2, text3, text1, text2, text2, text2];
+        var pos = 0;
+        var a = 0;
+        btn2.addEventListener("click",
+            function frame() {
+                for (let i = 0; i < myObj.length; i++) {
+                    myObj[i].style.backgroundColor = "transparent";
+                }
+                if (pos == 5) {
+                    // clearInterval(id);
+                } else {
+                    pos++;
+                    h1.innerText = myobj2[pos];
+                    text1.innerText = optionsA[pos];
+                    text2.innerText = optionsB[pos];
+                    text3.innerText = optionsC[pos];
+                }
+                a = pos;
+                return a;
+            }
+        );
+        btn3.addEventListener("click",
+            function frame2() {
+                for (let i = 0; i < myObj.length; i++) {
+                    myObj[i].style.backgroundColor = "transparent";
+                }
+                if (pos == 0) {
+                    // clearInterval(id);
+                } else {
+                    pos--;
+                    h1.innerText = myobj2[pos];
+                    text1.innerText = optionsA[pos];
+                    text2.innerText = optionsB[pos];
+                    text3.innerText = optionsC[pos];
+                }
+                // a=pos;
+                // return a;
+            }
+        );
+        let b = null;
+        function submission() {
+            btn.addEventListener("click",
+                function frame() {
+                    if (a == answers.length) {
+                    } else {
+                        answers[a].style.backgroundColor = "green";
+                    }
+                }
+            );
+        }
+
+        text1.addEventListener("click", function () {
+            if (text1.style.backgroundColor != "orange") {
+                text1.style.backgroundColor = "orange";
+                text2.style.backgroundColor = "transparent";
+                text3.style.backgroundColor = "transparent";
+                submission();
+            }
+            else {
+                text1.style.backgroundColor = "transparent";
+                btn.style.backgroundColor = "transparent";
+            }
+        });
+        text2.addEventListener("click", function () {
+            if (text2.style.backgroundColor != "orange") {
+                text2.style.backgroundColor = "orange";
+                text1.style.backgroundColor = "transparent";
+                text3.style.backgroundColor = "transparent";
+                submission();
+            }
+            else {
+                text2.style.backgroundColor = "transparent";
+                btn.style.backgroundColor = "transparent";
+            }
+        });
+        text3.addEventListener("click", function () {
+            if (text3.style.backgroundColor != "orange") {
+                text3.style.backgroundColor = "orange";
+                text2.style.backgroundColor = "transparent";
+                text1.style.backgroundColor = "transparent";
+                submission();
+            }
+            else {
+                text3.style.backgroundColor = "transparent";
+                btn.style.backgroundColor = "transparent";
+            }
+        });
+
+    </script>
+</body>
+
+</html>
