@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: rgb(0, 0, 0);
+}
+#sec{
+    background-color: rgb(83, 83, 83);
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#GameWindow{
+    width: 34rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(102, 102, 102);
+    overflow: hidden;
+    border-left:  10px solid white;
+    border-right:  10px solid white;
+}
+#RoadLines{
+    width: 58%;
+    height: 450vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: absolute;
+    bottom: 0pc;
+    animation: AnimateRoad 2s 0.5s linear infinite;
+}
+@keyframes AnimateRoad {
+    0%{
+        bottom: 0px;
+    }
+    100%{
+        bottom: -223vh;
+    }
+}
+.Lines{
+    width: 0.7rem;
+    height: 8rem;
+    background-color: rgb(255, 255, 255);
+    margin: 2rem 3rem;
+    z-index: 1;
+    position: relative;
+    
+}
+
+/* Car Section  */
+#CarDiv{
+    width: 5rem;
+    height: 10rem;
+    position: relative;
+    bottom: -35%;
+    z-index: 12;
+    user-select: none;
+
+}
+#CarDiv img{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.divs{
+    background-color: red;
+    width: 4rem;
+    height: 4rem;
+}
+
+
+/* Text Section  */
+#Help{
+    width: 100%;
+    position: absolute;
+    top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
+    z-index: 13;
+}
+#h1{
+    font: caption;
+    font-size: 1.4rem;
+    color: rgb(251, 255, 0);
+    font-weight: 700;
+    
+}
+.DIVI{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 5rem;
+    height: 8rem;
+}
+.btns{
+    width: 3rem;
+    height: 3rem;
+    background-color: rgb(107, 107, 107);
+    border: 1px solid white;
+    font: caption;
+    font-weight: 900;
+    font-size: 0.9rem;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    outline: none;
+    user-select: none;
+}
+
+@media screen and (max-width: 720px) {
+    .btns{
+        display: flex;
+    }
+    #Help{
+        display: none;
+    }
+}
+@media screen and (max-width: 520px) {
+    #RoadLines{
+        display: flex;
+        justify-content: center;
+    }
+}
