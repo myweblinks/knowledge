@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="Files/ludoFavicon.jpg" type="image/x-icon">
+    <title>Ludo</title>
+</head>
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(168, 168, 168);
+}
+
+#sec {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+}
+
+#Board {
+    width: 650px;
+    height: 650px;
+    background-color: #333;
+    border: 5px solid rgb(0, 0, 0);
+    border-radius: 1.8%;
+    overflow: hidden;
+    position: relative;
+}
+
+#Parts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(117, 117, 117);
+    border-radius: 1.8%;
+}
+
+.party {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 258px;
+    height: 258px;
+}
+
+#part1 {
+    background-color: blue;
+    top: 0;
+    left: 0;
+}
+
+#part2 {
+    background-color: red;
+    top: 0;
+    right: 0;
+}
+
+#part3 {
+    background-color: green;
+    bottom: 0;
+    right: 0;
+}
+
+#part4 {
+    background-color: yellow;
+    bottom: 0%;
+    left: 0;
+}
+
+#part5 {
+    background-color: rgb(255, 145, 145);
+    width: 140px;
+    height: 140px;
+}
+
+#design {
+    width: 190px;
+    height: 190px;
+    display: flex;
+    border-radius: 8%;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.596);
+}
+
+#design1 {
+    width: 190px;
+    height: 190px;
+    display: flex;
+    border-radius: 8%;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.637);
+}
+
+#design2 {
+    width: 190px;
+    height: 190px;
+    display: flex;
+    border-radius: 8%;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.637);
+}
+
+#design3 {
+    width: 190px;
+    height: 190px;
+    display: flex;
+    border-radius: 8%;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.637);
+}
+
+.BlueGotti {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: blue;
+    border-radius: 100%;
+}
+
+.RedGotti {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: red;
+    border-radius: 100%;
+}
+
+.YellowGotti {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: yellow;
+    border-radius: 100%;
+}
+
+.GreenGotti {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: green;
+    border-radius: 100%;
+}
+
+#RBSide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 12;
+}
+
+#blueMan {
+    width: 255px;
+    height: 132px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+#image {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-size: 105%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 19;
+}
+
+.BlueBoxes {
+    width: 38.4px;
+    height: 41px;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.GreenBoxes {
+    width: 41px;
+    height: 38.4px;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.RedBoxes {
+    width: 38.4px;
+    height: 40px;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.YellowBoxes {
+    width: 41px;
+    height: 38.4px;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#RedMan {
+    width: 254.7px;
+    height: 132px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+#RYSide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    z-index: 12;
+}
+
+#YellowMan {
+    height: 252px;
+    width: 135px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+#GreenMan {
+    height: 252px;
+    width: 135px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+#BlueBox2 {
+    background-color: blue;
+}
+
+#BlueBox11 {
+    background-color: blue;
+}
+
+#BlueBox8 {
+    background-color: blue;
+}
+
+#BlueBox9 {
+    background-color: blue;
+}
+
+#BlueBox10 {
+    background-color: blue;
+}
+
+#BlueBox12 {
+    background-color: blue;
+}
+
+#BlueBox15 {
+    background-color: blue;
+}
+
+#RedBox4 {
+    background-color: green;
+}
+
+#RedBox7 {
+    background-color: green;
+}
+
+#RedBox8 {
+    background-color: green;
+}
+
+#RedBox9 {
+    background-color: green;
+}
+
+#RedBox10 {
+    background-color: green;
+}
+
+#RedBox11 {
+    background-color: green;
+}
+
+#RedBox17 {
+    background-color: green;
+}
+
+#YellowBox5 {
+    background-color: red;
+}
+
+#YellowBox6 {
+    background-color: red;
+}
+
+#YellowBox7 {
+    background-color: red;
+}
+
+#YellowBox8 {
+    background-color: red;
+}
+
+#YellowBox11 {
+    background-color: red;
+}
+
+#YellowBox14 {
+    background-color: red;
+}
+
+#YellowBox17 {
+    background-color: red;
+}
+
+#GreenBox2 {
+    background-color: yellow;
+}
+
+#GreenBox5 {
+    background-color: yellow;
+}
+
+#GreenBox8 {
+    background-color: yellow;
+}
+
+#GreenBox11 {
+    background-color: yellow;
+}
+
+#GreenBox12 {
+    background-color: yellow;
+}
+
+#GreenBox13 {
+    background-color: yellow;
+}
+
+#GreenBox14 {
+    background-color: yellow;
+}
+
+#div1 {
+    background-color: yellow;
+    border: 2px solid black;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 100%;
+}
+
+#div12 {
+    background-color: yellow;
+    border: 2px solid black;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 100%;
+}
+
+#div2 {
+    background-color: blue;
+    border: 2px solid black;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 100%;
+}
+
+#div3 {
+    background-color: red;
+    border: 2px solid black;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 100%;
+}
+
+#div4 {
+    background-color: green;
+    border: 2px solid black;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 100%;
+}
+
+#ParentOfRoll {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 140px;
+    height: 140px;
+    background-color: rgb(145, 0, 0);
+    border-radius: 100px;
+    flex-direction: column;
+}
+
+#btn {
+    width: 100px;
+    height: 40px;
+    background-color: orange;
+    border: 2px solid rgb(255, 255, 255);
+    outline: none;
+    font: caption;
+    font-size: 1.6rem;
+    font-weight: 700;
+    border-radius: 40px;
+    cursor: pointer;
+}
+
+#h1 {
+    font: caption;
+    font-weight: 800;
+    font-size: 2rem;
+    height: 2.6rem;
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    color: white;
+}
+</style>
+<body>
+    <div id="sec">
+        <div id="Board">
+            <div id="Parts">
+                <div class="party" id="part1">
+                    <div id="design">
+                        <div class="BlueGotti">
+                            <div id="div2"></div>
+                        </div>
+                        <div class="BlueGotti">
+                            <div id="div2"></div>
+                        </div>
+                        <div class="BlueGotti">
+                            <div id="div2"></div>
+                        </div>
+                        <div class="BlueGotti">
+                            <div id="div2"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="party" id="part2">
+                    <div id="design1">
+                        <div class="RedGotti">
+                            <div id="div3"></div>
+                        </div>
+                        <div class="RedGotti">
+                            <div id="div3"></div>
+                        </div>
+                        <div class="RedGotti">
+                            <div id="div3"></div>
+                        </div>
+                        <div class="RedGotti">
+                            <div id="div3"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="party" id="part3">
+                    <div id="design2">
+                        <div class="GreenGotti">
+                            <div id="div4"></div>
+                        </div>
+                        <div class="GreenGotti">
+                            <div id="div4"></div>
+                        </div>
+                        <div class="GreenGotti">
+                            <div id="div4"></div>
+                        </div>
+                        <div class="GreenGotti">
+                            <div id="div4"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="party" id="part4">
+                    <div id="design3">
+                        <div class="YellowGotti">
+                            <div id="div1"></div>
+                        </div>
+                        <div class="YellowGotti">
+                            <div id="div12"></div>
+                        </div>
+                        <div class="YellowGotti">
+                            <div id="div1"></div>
+                        </div>
+                        <div class="YellowGotti">
+                            <div id="div1"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="party" id="part5"></div>
+            </div>
+            <div id="image"></div>
+            <div id="RBSide">
+                <div id="blueMan">
+                    <div class="BlueBoxes" id="BlueBox1"></div>
+                    <div class="BlueBoxes" id="BlueBox2"></div>
+                    <div class="BlueBoxes" id="BlueBox3"></div>
+                    <div class="BlueBoxes" id="BlueBox4"></div>
+                    <div class="BlueBoxes" id="BlueBox5"></div>
+                    <div class="BlueBoxes" id="BlueBox6"></div>
+                    <div class="BlueBoxes" id="BlueBox7"></div>
+                    <div class="BlueBoxes" id="BlueBox8"></div>
+                    <div class="BlueBoxes" id="BlueBox9"></div>
+                    <div class="BlueBoxes" id="BlueBox10"></div>
+                    <div class="BlueBoxes" id="BlueBox11"></div>
+                    <div class="BlueBoxes" id="BlueBox12"></div>
+                    <div class="BlueBoxes" id="BlueBox13"></div>
+                    <div class="BlueBoxes" id="BlueBox14"></div>
+                    <div class="BlueBoxes" id="BlueBox15"></div>
+                    <div class="BlueBoxes" id="BlueBox16"></div>
+                    <div class="BlueBoxes" id="BlueBox17"></div>
+                    <div class="BlueBoxes" id="BlueBox18"></div>
+                </div>
+                <div id="RedMan">
+                    <div class="RedBoxes" id="RedBox1"></div>
+                    <div class="RedBoxes" id="RedBox2"></div>
+                    <div class="RedBoxes" id="RedBox3"></div>
+                    <div class="RedBoxes" id="RedBox4"></div>
+                    <div class="RedBoxes" id="RedBox5"></div>
+                    <div class="RedBoxes" id="RedBox6"></div>
+                    <div class="RedBoxes" id="RedBox7"></div>
+                    <div class="RedBoxes" id="RedBox8"></div>
+                    <div class="RedBoxes" id="RedBox9"></div>
+                    <div class="RedBoxes" id="RedBox10"></div>
+                    <div class="RedBoxes" id="RedBox11"></div>
+                    <div class="RedBoxes" id="RedBox12"></div>
+                    <div class="RedBoxes" id="RedBox13"></div>
+                    <div class="RedBoxes" id="RedBox14"></div>
+                    <div class="RedBoxes" id="RedBox15"></div>
+                    <div class="RedBoxes" id="RedBox16"></div>
+                    <div class="RedBoxes" id="RedBox17"></div>
+                    <div class="RedBoxes" id="RedBox18"></div>
+                </div>
+            </div>
+            <div id="RYSide">
+                <div id="YellowMan">
+                    <div class="YellowBoxes" id="YellowBox1"></div>
+                    <div class="YellowBoxes" id="YellowBox2"></div>
+                    <div class="YellowBoxes" id="YellowBox3"></div>
+                    <div class="YellowBoxes" id="YellowBox4"></div>
+                    <div class="YellowBoxes" id="YellowBox5"></div>
+                    <div class="YellowBoxes" id="YellowBox6"></div>
+                    <div class="YellowBoxes" id="YellowBox7"></div>
+                    <div class="YellowBoxes" id="YellowBox8"></div>
+                    <div class="YellowBoxes" id="YellowBox9"></div>
+                    <div class="YellowBoxes" id="YellowBox10"></div>
+                    <div class="YellowBoxes" id="YellowBox11"></div>
+                    <div class="YellowBoxes" id="YellowBox12"></div>
+                    <div class="YellowBoxes" id="YellowBox13"></div>
+                    <div class="YellowBoxes" id="YellowBox14"></div>
+                    <div class="YellowBoxes" id="YellowBox15"></div>
+                    <div class="YellowBoxes" id="YellowBox16"></div>
+                    <div class="YellowBoxes" id="YellowBox17"></div>
+                    <div class="YellowBoxes" id="YellowBox18"></div>
+                </div>
+                <div id="GreenMan">
+                    <div class="GreenBoxes" id="GreenBox1"></div>
+                    <div class="GreenBoxes" id="GreenBox2"></div>
+                    <div class="GreenBoxes" id="GreenBox3"></div>
+                    <div class="GreenBoxes" id="GreenBox4"></div>
+                    <div class="GreenBoxes" id="GreenBox5"></div>
+                    <div class="GreenBoxes" id="GreenBox6"></div>
+                    <div class="GreenBoxes" id="GreenBox7"></div>
+                    <div class="GreenBoxes" id="GreenBox8"></div>
+                    <div class="GreenBoxes" id="GreenBox9"></div>
+                    <div class="GreenBoxes" id="GreenBox10"></div>
+                    <div class="GreenBoxes" id="GreenBox11"></div>
+                    <div class="GreenBoxes" id="GreenBox12"></div>
+                    <div class="GreenBoxes" id="GreenBox13"></div>
+                    <div class="GreenBoxes" id="GreenBox14"></div>
+                    <div class="GreenBoxes" id="GreenBox15"></div>
+                    <div class="GreenBoxes" id="GreenBox16"></div>
+                    <div class="GreenBoxes" id="GreenBox17"></div>
+                    <div class="GreenBoxes" id="GreenBox18"></div>
+                </div>
+            </div>
+        </div>
+        <div id="ParentOfRoll">
+            <div id="h1">0</div>
+            <button id="btn">Roll</button>
+        </div>
+    </div>
+    <script>
+        let GreenBox1 = document.getElementById("GreenBox1");
+let GreenBox4 = document.getElementById("GreenBox4");
+let h1 = document.getElementById("h1");
+let GreenBox7 = document.getElementById("GreenBox7");
+let GreenBox10 = document.getElementById("GreenBox10");
+let GreenBox13 = document.getElementById("GreenBox13");
+let BlueBox18 = document.getElementById("BlueBox18");
+let BlueBox17 = document.getElementById("BlueBox17");
+let BlueBox16 = document.getElementById("BlueBox16");
+let BlueBox15 = document.getElementById("BlueBox15");
+let BlueBox14 = document.getElementById("BlueBox14");
+let BlueBox13 = document.getElementById("BlueBox13");
+let BlueBox7 = document.getElementById("BlueBox7");
+let BlueBox1 = document.getElementById("BlueBox1");
+let BlueBox2 = document.getElementById("BlueBox2");
+let BlueBox3 = document.getElementById("BlueBox3");
+let BlueBox4 = document.getElementById("BlueBox4");
+let BlueBox5 = document.getElementById("BlueBox5");
+let BlueBox6 = document.getElementById("BlueBox6");
+let YellowBox16 = document.getElementById("YellowBox16");
+let YellowBox13 = document.getElementById("YellowBox13");
+let YellowBox10 = document.getElementById("YellowBox10");
+let YellowBox7 = document.getElementById("YellowBox7");
+let YellowBox4 = document.getElementById("YellowBox4");
+let YellowBox1 = document.getElementById("YellowBox1");
+let YellowBox2 = document.getElementById("YellowBox2");
+let YellowBox3 = document.getElementById("YellowBox3");
+let YellowBox6 = document.getElementById("YellowBox6");
+let YellowBox9 = document.getElementById("YellowBox9");
+let YellowBox12 = document.getElementById("YellowBox12");
+let YellowBox15 = document.getElementById("YellowBox15");
+let YellowBox18 = document.getElementById("YellowBox18");
+let RedBox1 = document.getElementById("RedBox1");
+let RedBox2 = document.getElementById("RedBox2");
+let RedBox3 = document.getElementById("RedBox3");
+let RedBox4 = document.getElementById("RedBox4");
+let RedBox5 = document.getElementById("RedBox5");
+let RedBox6 = document.getElementById("RedBox6");
+let RedBox12 = document.getElementById("RedBox12");
+let RedBox18 = document.getElementById("RedBox18");
+let RedBox17 = document.getElementById("RedBox17");
+let RedBox16 = document.getElementById("RedBox16");
+let RedBox15 = document.getElementById("RedBox15");
+let RedBox14 = document.getElementById("RedBox14");
+let RedBox13 = document.getElementById("RedBox13");
+let GreenBox3 = document.getElementById("GreenBox3");
+let GreenBox6 = document.getElementById("GreenBox6");
+let GreenBox9 = document.getElementById("GreenBox9");
+let GreenBox12 = document.getElementById("GreenBox12");
+let GreenBox15 = document.getElementById("GreenBox15");
+let GreenBox18 = document.getElementById("GreenBox18");
+let GreenBox17 = document.getElementById("GreenBox17");
+let GreenBox14 = document.getElementById("GreenBox14");
+let GreenBox11 = document.getElementById("GreenBox11");
+let GreenBox8 = document.getElementById("GreenBox8");
+let GreenBox5 = document.getElementById("GreenBox5");
+let GreenBox2 = document.getElementById("GreenBox2");
+let div12 = document.getElementById("div12");
+let btn = document.getElementById("btn");
+let id = null;
+let myOBJ = ["btn", GreenBox13, GreenBox10, GreenBox7, GreenBox4, GreenBox1, BlueBox18, BlueBox17, BlueBox16, BlueBox15, BlueBox14, BlueBox13, BlueBox7, BlueBox1, BlueBox2, BlueBox3, BlueBox4, BlueBox5, BlueBox6, YellowBox16, YellowBox13, YellowBox10, YellowBox7, YellowBox4, YellowBox1, YellowBox2, YellowBox3, YellowBox6, YellowBox9, YellowBox12, YellowBox15, YellowBox18, RedBox1, RedBox2, RedBox3, RedBox4, RedBox5, RedBox6, RedBox12, RedBox18, RedBox17, RedBox16, RedBox15, RedBox14, RedBox13, GreenBox3, GreenBox6, GreenBox9, GreenBox12, GreenBox15, GreenBox18, GreenBox17, GreenBox14, GreenBox11, GreenBox8, GreenBox5, GreenBox2];
+let e = 0;
+let c = 0;
+btn.addEventListener("click", function (event) {
+    var randomNum = 0;
+    let a = 1;
+    let b = 6;
+    let ranNum = a + (b - a) * Math.random();
+    let roundedRanNum = Math.round(ranNum);
+    randomNum = roundedRanNum;
+    h1.innerText = randomNum
+    id = setInterval(frame, 150);
+    function frame() {
+
+        if (e == randomNum) {
+            clearInterval(id);
+            e = 0;
+        } else {
+            e++;
+            console.log(randomNum)
+            c++
+            es(c);
+        }
+    }
+});
+let ese = null;
+function es(ese) {
+    myOBJ[ese].innerHTML = `<div id="div1"></div>`;
+    myOBJ[ese - 1].innerHTML = "";
+    div12.style.border = "none"
+    console.log(ese);
+
+}
+
+
+    </script>
+</body>
+
+</html>
