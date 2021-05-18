@@ -9,7 +9,7 @@
     <title>Ludo</title>
 </head>
 <style>
-    * {
+   * {
     margin: 0;
     padding: 0;
 }
@@ -85,6 +85,10 @@ body {
     background-color: rgb(255, 145, 145);
     width: 140px;
     height: 140px;
+    background-image: url(/Files/ludoFavicon.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 #design {
@@ -397,22 +401,102 @@ body {
     background-color: yellow;
 }
 
+#div13 {
+    background-color: yellow;
+    border: 2px solid black;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 100%;
+}
+#div14 {
+    background-color: yellow;
+    border: 2px solid black;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 100%;
+}
+#div19 {
+    background-color: yellow;
+    border: 2px solid black;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 100%;
+    position: relative;
+    z-index: 200
+}
+#div15 {
+    background-color: yellow;
+    border: 2px solid black;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 100%;
+}
+#div16 {
+    background-color: yellow;
+    border: 2px solid black;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 100%;
+}
+#div20 {
+    background-color: yellow;
+    border: 2px solid black;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 100%;
+    position: fixed;
+    z-index: 200;    
+}
+#div21 {
+    background-color: yellow;
+    border: 2px solid black;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 100%;
+    position: fixed;
+    z-index: 200;    
+}
+#div22 {
+    background-color: yellow;
+    border: 2px solid black;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 100%;
+    position: fixed;
+    z-index: 200;    
+}
+#div23 {
+    background-color: yellow;
+    border: 2px solid black;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 100%;
+    position: fixed;
+    z-index: 200;    
+}
+
+.YellowGotti{
+    position: relative;
+    z-index: 100;
+    
+}
+.Div16Togg{
+    animation: animate 0.5s linear alternate infinite;}
+@keyframes animate{
+    from{
+        box-shadow: 0px 0px 12px 3px yellow;
+    }
+    to{
+        box-shadow: 0px 0px 12px 3px red;
+    }
+}
 #div1 {
-    background-color: yellow;
+    background-color: blue;
     border: 2px solid black;
     width: 2rem;
     height: 2rem;
     border-radius: 100%;
 }
-
-#div12 {
-    background-color: yellow;
-    border: 2px solid black;
-    width: 2rem;
-    height: 2rem;
-    border-radius: 100%;
-}
-
 #div2 {
     background-color: blue;
     border: 2px solid black;
@@ -420,8 +504,42 @@ body {
     height: 2rem;
     border-radius: 100%;
 }
-
 #div3 {
+    background-color: blue;
+    border: 2px solid black;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 100%;
+}
+#div4 {
+    background-color: blue;
+    border: 2px solid black;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 100%;
+}
+#div5 {
+    background-color: red;
+    border: 2px solid black;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 100%;
+}
+#div6 {
+    background-color: red;
+    border: 2px solid black;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 100%;
+}
+#div7 {
+    background-color: red;
+    border: 2px solid black;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 100%;
+}
+#div8 {
     background-color: red;
     border: 2px solid black;
     width: 2rem;
@@ -429,7 +547,28 @@ body {
     border-radius: 100%;
 }
 
-#div4 {
+#div9 {
+    background-color: green;
+    border: 2px solid black;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 100%;
+}
+#div12 {
+    background-color: green;
+    border: 2px solid black;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 100%;
+}
+#div10 {
+    background-color: green;
+    border: 2px solid black;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 100%;
+}
+#div11 {
     background-color: green;
     border: 2px solid black;
     width: 2rem;
@@ -455,7 +594,7 @@ body {
     background-color: orange;
     border: 2px solid rgb(255, 255, 255);
     outline: none;
-    font: caption;
+    font: caption; 
     font-size: 1.6rem;
     font-weight: 700;
     border-radius: 40px;
@@ -476,70 +615,83 @@ body {
 }
 </style>
 <body>
+   <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="Files/ludoFavicon.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="Style/style.css">
+    <title>Ludo</title>
+</head>
+
+<body>
     <div id="sec">
         <div id="Board">
             <div id="Parts">
                 <div class="party" id="part1">
                     <div id="design">
                         <div class="BlueGotti">
-                            <div id="div2"></div>
+                            <div id="div1"></div>
                         </div>
                         <div class="BlueGotti">
                             <div id="div2"></div>
                         </div>
                         <div class="BlueGotti">
-                            <div id="div2"></div>
+                            <div id="div3"></div>
                         </div>
                         <div class="BlueGotti">
-                            <div id="div2"></div>
+                            <div id="div4"></div>
                         </div>
                     </div>
                 </div>
                 <div class="party" id="part2">
                     <div id="design1">
                         <div class="RedGotti">
-                            <div id="div3"></div>
+                            <div id="div5"></div>
                         </div>
                         <div class="RedGotti">
-                            <div id="div3"></div>
+                            <div id="div6"></div>
                         </div>
                         <div class="RedGotti">
-                            <div id="div3"></div>
+                            <div id="div7"></div>
                         </div>
                         <div class="RedGotti">
-                            <div id="div3"></div>
+                            <div id="div8"></div>
                         </div>
                     </div>
                 </div>
                 <div class="party" id="part3">
                     <div id="design2">
                         <div class="GreenGotti">
-                            <div id="div4"></div>
+                            <div id="div9"></div>
                         </div>
                         <div class="GreenGotti">
-                            <div id="div4"></div>
+                            <div id="div10"></div>
                         </div>
                         <div class="GreenGotti">
-                            <div id="div4"></div>
+                            <div id="div11"></div>
                         </div>
                         <div class="GreenGotti">
-                            <div id="div4"></div>
+                            <div id="div12"></div>
                         </div>
                     </div>
                 </div>
                 <div class="party" id="part4">
                     <div id="design3">
                         <div class="YellowGotti">
-                            <div id="div1"></div>
+                            <div id="div13"></div>
+                        </div>
+                        <div class="YellowGotti"> 
+                            <div id="div14"></div>
                         </div>
                         <div class="YellowGotti">
-                            <div id="div12"></div>
+                            <div id="div15"></div>
                         </div>
                         <div class="YellowGotti">
-                            <div id="div1"></div>
-                        </div>
-                        <div class="YellowGotti">
-                            <div id="div1"></div>
+                            <div id="div16"></div>
                         </div>
                     </div>
                 </div>
@@ -636,10 +788,13 @@ body {
             <button id="btn">Roll</button>
         </div>
     </div>
-    <script>
-        let GreenBox1 = document.getElementById("GreenBox1");
+    <script src="Script/js.js"></script>
+</body>
+
+</html>
+    <script>let h1 = document.getElementById("h1");
+let GreenBox1 = document.getElementById("GreenBox1");
 let GreenBox4 = document.getElementById("GreenBox4");
-let h1 = document.getElementById("h1");
 let GreenBox7 = document.getElementById("GreenBox7");
 let GreenBox10 = document.getElementById("GreenBox10");
 let GreenBox13 = document.getElementById("GreenBox13");
@@ -694,43 +849,155 @@ let GreenBox11 = document.getElementById("GreenBox11");
 let GreenBox8 = document.getElementById("GreenBox8");
 let GreenBox5 = document.getElementById("GreenBox5");
 let GreenBox2 = document.getElementById("GreenBox2");
-let div12 = document.getElementById("div12");
+let div13 = document.getElementById("div13");
+let div14 = document.getElementById("div14");
+let div15 = document.getElementById("div15");
+let div16 = document.getElementById("div16");
 let btn = document.getElementById("btn");
-let id = null;
-let myOBJ = ["btn", GreenBox13, GreenBox10, GreenBox7, GreenBox4, GreenBox1, BlueBox18, BlueBox17, BlueBox16, BlueBox15, BlueBox14, BlueBox13, BlueBox7, BlueBox1, BlueBox2, BlueBox3, BlueBox4, BlueBox5, BlueBox6, YellowBox16, YellowBox13, YellowBox10, YellowBox7, YellowBox4, YellowBox1, YellowBox2, YellowBox3, YellowBox6, YellowBox9, YellowBox12, YellowBox15, YellowBox18, RedBox1, RedBox2, RedBox3, RedBox4, RedBox5, RedBox6, RedBox12, RedBox18, RedBox17, RedBox16, RedBox15, RedBox14, RedBox13, GreenBox3, GreenBox6, GreenBox9, GreenBox12, GreenBox15, GreenBox18, GreenBox17, GreenBox14, GreenBox11, GreenBox8, GreenBox5, GreenBox2];
-let e = 0;
-let c = 0;
-btn.addEventListener("click", function (event) {
-    var randomNum = 0;
-    let a = 1;
-    let b = 6;
-    let ranNum = a + (b - a) * Math.random();
-    let roundedRanNum = Math.round(ranNum);
-    randomNum = roundedRanNum;
-    h1.innerText = randomNum
-    id = setInterval(frame, 150);
-    function frame() {
+let image = document.getElementById("image");
+// let div21 = document.getElementById("div21");
 
-        if (e == randomNum) {
-            clearInterval(id);
-            e = 0;
+
+
+// All Objects In JS
+
+
+//This Object for selecting Gotties For yellow User
+let YellowPlayerFourGotties = [div13, div14, div15, div16];
+
+//Yellow Player Moving Gotties Path 
+let YellowColorPlayerBoxesMoves = ["btn", GreenBox13, GreenBox10, GreenBox7, GreenBox4, GreenBox1, BlueBox18, BlueBox17, BlueBox16, BlueBox15, BlueBox14, BlueBox13, BlueBox7, BlueBox1, BlueBox2, BlueBox3, BlueBox4, BlueBox5, BlueBox6, YellowBox16, YellowBox13, YellowBox10, YellowBox7, YellowBox4, YellowBox1, YellowBox2, YellowBox3, YellowBox6, YellowBox9, YellowBox12, YellowBox15, YellowBox18, RedBox1, RedBox2, RedBox3, RedBox4, RedBox5, RedBox6, RedBox12, RedBox18, RedBox17, RedBox16, RedBox15, RedBox14, RedBox13, GreenBox3, GreenBox6, GreenBox9, GreenBox12, GreenBox15, GreenBox18, GreenBox17, GreenBox14, GreenBox11, GreenBox8, GreenBox5, GreenBox2, image];
+
+
+//Blue Player Moving Gotties Path 
+let BlueColorPlayerBoxesMoves = ["btn", BlueBox2, BlueBox3, BlueBox4, BlueBox5, BlueBox6, YellowBox16, YellowBox13, YellowBox10, YellowBox7, YellowBox4, YellowBox1, YellowBox2, YellowBox3, YellowBox6, YellowBox9, YellowBox12, YellowBox15, YellowBox18, RedBox1, RedBox2, RedBox3, RedBox4, RedBox5, RedBox6, RedBox12, RedBox18, RedBox17, RedBox16, RedBox15, RedBox14, RedBox13, GreenBox3, GreenBox6, GreenBox9, GreenBox12, GreenBox15, GreenBox18, GreenBox17, GreenBox16, GreenBox13, GreenBox10, GreenBox7, GreenBox4, GreenBox1, BlueBox18, BlueBox17, BlueBox16, BlueBox15, BlueBox14, BlueBox13, BlueBox7, BlueBox8, BlueBox9, BlueBox10, BlueBox11, BlueBox12];
+
+
+
+//Red Player Moving Gotties Path 
+let RedColorPlayerBoxesMoves = ["btn", YellowBox6, YellowBox9, YellowBox12, YellowBox15, YellowBox18, RedBox1, RedBox2, RedBox3, RedBox4, RedBox5, RedBox6, RedBox12, RedBox18, RedBox17, RedBox16, RedBox15, RedBox14, RedBox13, GreenBox3, GreenBox6, GreenBox9, GreenBox12, GreenBox15, GreenBox18, GreenBox17, GreenBox16, GreenBox13, GreenBox10, GreenBox7, GreenBox4, GreenBox1, BlueBox18, BlueBox17, BlueBox16, BlueBox15, BlueBox14, BlueBox13, BlueBox1, BlueBox2, BlueBox3, BlueBox4, BlueBox5, BlueBox6, YellowBox16, YellowBox13, YellowBox10, YellowBox7, YellowBox4, YellowBox1, YellowBox2, YellowBox5, YellowBox8, YellowBox11, YellowBox14, YellowBox17];
+
+
+//Green Player Moving Gotties Path 
+let GreenColorPlayerBoxesMoves = ["btn", RedBox17, RedBox16, RedBox15, RedBox14, RedBox13, GreenBox3, GreenBox6, GreenBox9, GreenBox12, GreenBox15, GreenBox18, GreenBox17, GreenBox16, GreenBox13, GreenBox10, GreenBox7, GreenBox4, GreenBox1, BlueBox18, BlueBox17, BlueBox16, BlueBox15, BlueBox14, BlueBox13, BlueBox7, BlueBox1, BlueBox2, BlueBox3, BlueBox4, BlueBox5, BlueBox6, YellowBox16, YellowBox13, YellowBox10, YellowBox7, YellowBox4, YellowBox1, YellowBox2, YellowBox3, YellowBox6, YellowBox9, YellowBox12, YellowBox15, YellowBox18, RedBox1, RedBox2, RedBox3, RedBox4, RedBox5, RedBox6, RedBox12, RedBox11, RedBox10, RedBox9, RedBox8, RedBox7];
+
+
+
+//Some Varible Make to be Globle here. to make a best Loop.
+let YellowMainCoutedNumber = 1; //This Variable is for Total Computed Number of yellow player gotties moves.
+let DataOfYellowGotties = null
+var Dis = 0;
+var Outtedi = null;
+var ui = null;
+
+
+function Dis1(DataOfYellowGotties, Outi, DetailOfitem, DetailOfitem1) {
+    Dis = DataOfYellowGotties;
+    Outtedi = Outi;
+
+    var div20 = document.getElementById(DetailOfitem);
+    var div21 = document.getElementById(DetailOfitem1);
+    var div22 = document.getElementById(DetailOfitem);
+    var div23 = document.getElementById(DetailOfitem);
+
+    //Opened Yellow Gotties Object
+    let OpenedYellowGotties = [div21, div22, div23, div20];
+    ui = OpenedYellowGotties;
+}
+//When User Click on Roll Button Then This Function will run.
+btn.addEventListener("click", function () {
+
+    //Variables in function
+    let a = 1; // Write Here First Number Which You want 
+    let b = 6; // Write Here last number which you want
+    let ranNum = a + (b - a) * Math.random(); //Creating Random Number between 1 to 6 
+    let RandomNum = Math.round(ranNum); // Rouding Math.random Number. Like 1, 2, 3...
+    let YellowGottiesMovesCount = 0; //Yellow Gotties Moves Count
+    let id = null; //This Variable For Store Number Of SetInteval.
+    let PlayerNum = 1; //This Helps to make turn to other player.
+    //Output Text of RandomNum to display Which Number comes.
+    h1.innerText = RandomNum; // Output to website Ramdom Dice Number
+
+
+
+    //Creating Players Turns Switcher.
+    switch (PlayerNum) {
+        case 1:
+            //Creating A switch to control number.
+            if (RandomNum != 1) {
+                for (let i = 0; i < YellowPlayerFourGotties.length; i++) {
+                    YellowPlayerFourGotties[i].classList.replace("Div16Togg", "main") //Remove added Class List
+                    YellowPlayerFourGotties[i].style.boxShadow = "0px 0px 0px 0px"; //Remove Shadow
+                }
+            } else {
+                for (let i = 0; i < YellowPlayerFourGotties.length; i++) {
+                    if (YellowPlayerFourGotties[i].style.display != "none") {
+
+                        for (let i = 0; i < YellowPlayerFourGotties.length; i++) {
+                            YellowPlayerFourGotties[i].classList.add("Div16Togg"); //Add Class 
+                            btn.style.display = "none"; //Do display none when 1 number appear.
+                            YellowPlayerFourGotties[i].addEventListener("click", function () {
+                                if (btn.style.display != "block") {
+                                    Dis = YellowPlayerFourGotties[i].style.display = "none"; //Do display none when User click on it each item.
+
+                                    btn.style.display = "block"; //Unhide BTN when user Selected one.
+                                    let GetIdClickedYellowGotties = YellowColorPlayerBoxesMoves[1].innerHTML += `<div class="main1" id="div2${i}"></div>`;
+                                    Dis1(Dis, i, GetIdClickedYellowGotties.slice("23", "28"));
+                                }
+
+                                for (let i = 0; i < YellowPlayerFourGotties.length; i++) {
+                                    YellowPlayerFourGotties[i].classList.replace("Div16Togg", "main") //Remove added Class List
+                                    YellowPlayerFourGotties[i].style.boxShadow = "0px 0px 0px 0px"; //Remove Shadow
+                                }
+                            });
+                        }
+                    } else {
+
+                    }
+                }
+
+            }
+            break;
+        case 2:
+
+            break;
+        default:
+            break;
+    }
+
+
+    id = setInterval(YellowMovesCounter, 100); //This Interval is for Make Yellow Moves
+
+
+    //This Function is for Make yellow moves. Creating A Loop to Animted Yellow Gotties is moving in website :)
+    function YellowMovesCounter() {
+        if (YellowGottiesMovesCount == RandomNum) {
+            clearInterval(id); //Clear interval When Yellow Gotties Counts equals to Random Dice Numbers.
+            YellowGottiesMovesCount = 0; // When This loop Finished Then Take Default Value Of the Varible For next time to make next one more loop. 
         } else {
-            e++;
-            console.log(randomNum)
-            c++
-            es(c);
+            YellowGottiesMovesCount++;  //Increasing A Variable To make a loop. 
+            if (div13, div14.style.display != "none" || div14, div15.style.display != "none" || div15, div16.style.display != "none" || div16, div13.style.display != "none" || div13, div15.style.display != "none" || div14, div16.style.display != "none") {
+                if (Dis != "none") {
+                } else {
+                    if (YellowMainCoutedNumber != 57) {
+                        YellowMainCoutedNumber++;   // This variable is for Complete Make Yellow Moves.
+                        YellowGottiesChangeLocation(YellowMainCoutedNumber); //CAlling the function which move gotties
+                    } else {
+                        // div21.style.display = "none";
+                    }
+                }
+            }
+            else {
+            }
         }
     }
+    //Creating a function for change location of yellow gotties.
+    function YellowGottiesChangeLocation(InputYellowCountedMain) {
+        YellowColorPlayerBoxesMoves[InputYellowCountedMain].innerHTML = `<div class="main1" id="div2${Outtedi}"></div>`;
+        YellowColorPlayerBoxesMoves[InputYellowCountedMain - 1].innerHTML = "";
+    }
+
 });
-let ese = null;
-function es(ese) {
-    myOBJ[ese].innerHTML = `<div id="div1"></div>`;
-    myOBJ[ese - 1].innerHTML = "";
-    div12.style.border = "none"
-    console.log(ese);
-
-}
-
 
     </script>
 </body>
