@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll BTN Like Pages</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background-color: #111;
+    }
+
+    #sec {
+        background-color: #222;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        position: relative;
+    }
+
+    #window {
+        background-color: #333;
+        border: 2px solid white;
+        border-radius: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width: 53.333333333rem;
+        height: 30rem;
+        overflow-x: hidden;
+        /* scrollbar-width: 0px;
+  scrollbar-width: thin; */
+    }
+
+    #window::-webkit-scrollbar {
+        background-color: rgba(255, 0, 0, 0);
+        width: 100%;
+        border-radius: 1rem;
+        margin: 0;
+        padding: 0;
+        height: 0.8rem;
+        display: none;
+    }
+
+    #window::-webkit-scrollbar-button {
+        background-color: rgb(153, 84, 84);
+        width: 0;
+        height: 0;
+    }
+
+    #window::-webkit-scrollbar-thumb {
+        border-radius: 0.8rem;
+        background-color: yellow;
+        display: none;
+    }
+
+    #BTNPre {
+        background-color: wheat;
+        width: 7rem;
+        height: 2.5rem;
+        font: caption;
+        font-weight: 700;
+        font-size: 1.4rem;
+        color: black;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        border: 4px solid red;
+        border-radius: 2rem;
+        cursor: pointer;
+        user-select: none;
+    }
+
+    #BTNNxt {
+        background-color: wheat;
+        width: 7rem;
+        height: 2.5rem;
+        font: caption;
+        font-weight: 700;
+        font-size: 1.4rem;
+        color: black;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        border: 4px solid red;
+        border-radius: 2rem;
+        cursor: pointer;
+        user-select: none;
+    }
+
+    #Slide {
+        background-color: #444;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        position: absolute;
+        /* width: 1066.666666666667rem; */
+        width: 2000%;
+        height: 30rem;
+        /* border: 2px solid yellow; */
+        left: 0;
+    }
+
+    .Boxes {
+        display: flex;
+        background-color: #555;
+        /* border: 2px solid white; */
+        width: 100%;
+        height: 100%;
+    }
+    #Box1{
+        background-image: url(/1.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    #Box2{
+        background-image: url(/2.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    #Box3{
+        background-image: url(/3.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    #Box4{
+        background-image: url(/4.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    #Box5{
+        background-image: url(/5.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    #Box6{
+        background-image: url(/6.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    #Box7{
+        background-image: url(/7.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    #Box8{
+        background-image: url(/8.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    #Box9{
+        background-image: url(/9.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    #Box10{
+        background-image: url(/10.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    #Box11{
+        background-image: url(/11.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    #Box12{
+        background-image: url(/12.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    #Box13{
+        background-image: url(/13.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    #Box14{
+        background-image: url(/14.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    #Box15{
+        background-image: url(/15.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    #Box16{
+        background-image: url(/16.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    #Box17{
+        background-image: url(/17.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    #Box18{
+        background-image: url(/18.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    #Box19{
+        background-image: url(/19.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    #Box20{
+        background-image: url(/20.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    @media screen and (max-width: 600px) {
+        #BTNNxt{
+            font-size: 0.8rem;
+            height: 1.5rem;
+            width: 7.2rem;
+            border: 1px solid red;
+        }
+        #BTNPre{
+            height: 1.5rem;
+            width: 7.2rem;
+            border: 1px solid red;
+            font-size: 0.8rem;
+        }
+    }
+</style>
+
+<body>
+    <div id="sec">
+        <div id="BTNPre">
+            Previos
+        </div>
+        <div id="window">
+            <div id="Slide">
+                <div id="Box1" class="Boxes"></div>
+                <div id="Box2" class="Boxes"></div>
+                <div id="Box3" class="Boxes"></div>
+                <div id="Box4" class="Boxes"></div>
+                <div id="Box5" class="Boxes"></div>
+                <div id="Box6" class="Boxes"></div>
+                <div id="Box7" class="Boxes"></div>
+                <div id="Box8" class="Boxes"></div>
+                <div id="Box9" class="Boxes"></div>
+                <div id="Box10" class="Boxes"></div>
+                <div id="Box11" class="Boxes"></div>
+                <div id="Box12" class="Boxes"></div>
+                <div id="Box13" class="Boxes"></div>
+                <div id="Box14" class="Boxes"></div>
+                <div id="Box15" class="Boxes"></div>
+                <div id="Box16" class="Boxes"></div>
+                <div id="Box17" class="Boxes"></div>
+                <div id="Box18" class="Boxes"></div>
+                <div id="Box19" class="Boxes"></div>
+                <div id="Box20" class="Boxes"></div>
+            </div>
+        </div>
+        <div id="BTNNxt">
+            Next
+        </div>
+        
+    </div>
+
+    <script>
+        let BTNPre = document.getElementById("BTNPre");
+        let Box1 = document.getElementById("Box1");
+        let Box2 = document.getElementById("Box2");
+        let Box3 = document.getElementById("Box3");
+        let Box4 = document.getElementById("Box4");
+        let Box5 = document.getElementById("Box5");
+        let Box6 = document.getElementById("Box6");
+        let Box7 = document.getElementById("Box7");
+        let Box8 = document.getElementById("Box8");
+        let Box9 = document.getElementById("Box9");
+        let Box10 = document.getElementById("Box10");
+        let Box11 = document.getElementById("Box11");
+        let Box12 = document.getElementById("Box12");
+        let Box13 = document.getElementById("Box13");
+        let Box14 = document.getElementById("Box14");
+        let Box15 = document.getElementById("Box15");
+        let Box16 = document.getElementById("Box16");
+        let Box17 = document.getElementById("Box17");
+        let Box18 = document.getElementById("Box18");
+        let Box19 = document.getElementById("Box19");
+        let Box20 = document.getElementById("Box20");
+        let o = 0;
+        let i = null;
+        let MySlideChildArray = [Box1, Box2, Box3,Box4 , Box5 , Box6 , Box7 , Box8 , Box9 , Box10, Box11, Box12, Box13, Box14, Box15, Box16, Box17, Box18, Box19, Box20];
+
+
+
+
+        let BTNNxt = document.getElementById("BTNNxt");
+
+        function DoNXT() {
+            if (o>19) {
+                // o--;
+                o=19;                
+            } else {
+                o++;
+                console.log(o)
+                MySlideChildArray[o].scrollIntoView({
+                    behavior: "smooth"
+                }
+                )
+            }
+            
+            
+            
+            BTNNxt.addEventListener("mouseup", () => {
+                
+            })
+            i = o;
+        }
+        let Pop = null;
+        function DoNXTAuto() {
+            if (o>19) {
+                // o--;
+                // o=19;             
+                o=0;
+            } else {
+                o++;
+                MySlideChildArray[o].scrollIntoView({
+                    behavior: "smooth"
+                }
+                )
+            }
+            
+            
+            
+            BTNNxt.addEventListener("mouseup", () => {
+
+            })
+            i = o;
+        }
+        if (i != 19) {
+            Pop = setInterval(DoNXTAuto, 2500);
+        } else {  
+                clearInterval(Pop);
+        }
+        
+        function DoPre() {
+            
+            
+            if (i<1) {
+                i=0;                
+            } else {
+                i--
+                MySlideChildArray[i].scrollIntoView({
+                    behavior: "smooth"
+                }
+                )
+            }
+            BTNPre.addEventListener("mouseup", () => {
+                
+            })
+            
+            o = i;
+        }
+        BTNNxt.addEventListener("mousedown", () => {
+            DoNXT();
+        })
+        
+        BTNPre.addEventListener("mousedown", () => {
+            DoPre();
+        })
+
+        </script>
+</body>
+
+</html>
