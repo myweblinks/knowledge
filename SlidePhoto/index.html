@@ -13,116 +13,7 @@
         padding: 0;
     }
 
-    body {
-        background-color: #111;
-    }
-
-    #sec {
-        background-color: #222;
-        width: 100%;
-        height: 100vh;
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        position: relative;
-    }
-
-    #window {
-        background-color: #333;
-        border: 2px solid white;
-        border-radius: 1rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        width: 53.333333333rem;
-        height: 30rem;
-        overflow-x: hidden;
-        /* scrollbar-width: 0px;
-  scrollbar-width: thin; */
-    }
-
-    #window::-webkit-scrollbar {
-        background-color: rgba(255, 0, 0, 0);
-        width: 100%;
-        border-radius: 1rem;
-        margin: 0;
-        padding: 0;
-        height: 0.8rem;
-        display: none;
-    }
-
-    #window::-webkit-scrollbar-button {
-        background-color: rgb(153, 84, 84);
-        width: 0;
-        height: 0;
-    }
-
-    #window::-webkit-scrollbar-thumb {
-        border-radius: 0.8rem;
-        background-color: yellow;
-        display: none;
-    }
-
-    #BTNPre {
-        background-color: wheat;
-        width: 7rem;
-        height: 2.5rem;
-        font: caption;
-        font-weight: 700;
-        font-size: 1.4rem;
-        color: black;
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        border: 4px solid red;
-        border-radius: 2rem;
-        cursor: pointer;
-        user-select: none;
-    }
-
-    #BTNNxt {
-        background-color: wheat;
-        width: 7rem;
-        height: 2.5rem;
-        font: caption;
-        font-weight: 700;
-        font-size: 1.4rem;
-        color: black;
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        border: 4px solid red;
-        border-radius: 2rem;
-        cursor: pointer;
-        user-select: none;
-    }
-
-    #Slide {
-        background-color: #444;
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        position: absolute;
-        /* width: 1066.666666666667rem; */
-        width: 2000%;
-        height: 30rem;
-        /* border: 2px solid yellow; */
-        left: 0;
-    }
-
-    .Boxes {
-        display: flex;
-        background-color: #555;
-        /* border: 2px solid white; */
-        width: 100%;
-        height: 100%;
-    }
-    #Box1{
+    /* #Box1{
         background-image: url(/1.jpg);
         background-position: center;
         background-repeat: no-repeat;
@@ -241,16 +132,132 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
+    } */
+    body {
+        background-color: #111;
+    }
+
+    #sec {
+        background-color: #222;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        position: relative;
+    }
+
+    #window {
+        background-color: #333;
+        border: 2px solid white;
+        border-radius: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width: 53.333333333rem;
+        height: 30rem;
+        overflow-x: hidden;
+        /* scrollbar-width: 0px;
+  scrollbar-width: thin; */
+    }
+
+    #window::-webkit-scrollbar {
+        background-color: rgba(255, 0, 0, 0);
+        width: 100%;
+        border-radius: 1rem;
+        margin: 0;
+        padding: 0;
+        height: 0.8rem;
+        display: none;
+    }
+
+    #window::-webkit-scrollbar-button {
+        background-color: rgb(153, 84, 84);
+        width: 0;
+        height: 0;
+    }
+
+    #window::-webkit-scrollbar-thumb {
+        border-radius: 0.8rem;
+        background-color: yellow;
+        display: none;
+    }
+
+    #BTNPre {
+        background-color: wheat;
+        width: 7rem;
+        height: 2.5rem;
+        font: caption;
+        font-weight: 700;
+        font-size: 1.4rem;
+        color: black;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        border: 4px solid red;
+        border-radius: 2rem;
+        cursor: pointer;
+        user-select: none;
+    }
+
+    #BTNNxt {
+        background-color: wheat;
+        width: 7rem;
+        height: 2.5rem;
+        font: caption;
+        font-weight: 700;
+        font-size: 1.4rem;
+        color: black;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        border: 4px solid red;
+        border-radius: 2rem;
+        cursor: pointer;
+        user-select: none;
+    }
+
+    #Slide {
+        background-color: #444;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        position: absolute;
+        /* width: 1066.666666666667rem; */
+        width: 2000%;
+        height: 30rem;
+        /* border: 2px solid yellow; */
+        left: 0;
+    }
+
+    .Boxes {
+        display: flex;
+        background-color: #555;
+        /* border: 2px solid white; */
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+    .imgs{
+        width: 100%;
+        position: absolute;
+        height: 100%;
     }
 
     @media screen and (max-width: 600px) {
-        #BTNNxt{
+        #BTNNxt {
             font-size: 0.8rem;
             height: 1.5rem;
             width: 7.2rem;
             border: 1px solid red;
         }
-        #BTNPre{
+
+        #BTNPre {
             height: 1.5rem;
             width: 7.2rem;
             border: 1px solid red;
@@ -266,32 +273,32 @@
         </div>
         <div id="window">
             <div id="Slide">
-                <div id="Box1" class="Boxes"></div>
-                <div id="Box2" class="Boxes"></div>
-                <div id="Box3" class="Boxes"></div>
-                <div id="Box4" class="Boxes"></div>
-                <div id="Box5" class="Boxes"></div>
-                <div id="Box6" class="Boxes"></div>
-                <div id="Box7" class="Boxes"></div>
-                <div id="Box8" class="Boxes"></div>
-                <div id="Box9" class="Boxes"></div>
-                <div id="Box10" class="Boxes"></div>
-                <div id="Box11" class="Boxes"></div>
-                <div id="Box12" class="Boxes"></div>
-                <div id="Box13" class="Boxes"></div>
-                <div id="Box14" class="Boxes"></div>
-                <div id="Box15" class="Boxes"></div>
-                <div id="Box16" class="Boxes"></div>
-                <div id="Box17" class="Boxes"></div>
-                <div id="Box18" class="Boxes"></div>
-                <div id="Box19" class="Boxes"></div>
-                <div id="Box20" class="Boxes"></div>
+                <div id="Box1" class="Boxes"><img src="/1.jpg" alt="" class="imgs"></div>
+                <div id="Box2" class="Boxes"><img src="/2.jpg" alt="" class="imgs"></div>
+                <div id="Box3" class="Boxes"><img src="/3.jpg" alt="" class="imgs"></div>
+                <div id="Box4" class="Boxes"><img src="/4.jpg" alt="" class="imgs"></div>
+                <div id="Box5" class="Boxes"><img src="/5.jpg" alt="" class="imgs"></div>
+                <div id="Box6" class="Boxes"><img src="/6.jpg" alt="" class="imgs"></div>
+                <div id="Box7" class="Boxes"><img src="/7.jpg" alt="" class="imgs"></div>
+                <div id="Box8" class="Boxes"><img src="/8.jpg" alt="" class="imgs"></div>
+                <div id="Box9" class="Boxes"><img src="/9.jpg" alt="" class="imgs"></div>
+                <div id="Box10" class="Boxes"><img src="/10.jpg" alt="" class="imgs"></div>
+                <div id="Box11" class="Boxes"><img src="/11.jpg" alt="" class="imgs"></div>
+                <div id="Box12" class="Boxes"><img src="/12.jpg" alt="" class="imgs"></div>
+                <div id="Box13" class="Boxes"><img src="/13.jpg" alt="" class="imgs"></div>
+                <div id="Box14" class="Boxes"><img src="/14.jpg" alt="" class="imgs"></div>
+                <div id="Box15" class="Boxes"><img src="/15.jpg" alt="" class="imgs"></div>
+                <div id="Box16" class="Boxes"><img src="/16.jpg" alt="" class="imgs"></div>
+                <div id="Box17" class="Boxes"><img src="/17.jpg" alt="" class="imgs"></div>
+                <div id="Box18" class="Boxes"><img src="/18.jpg" alt="" class="imgs"></div>
+                <div id="Box19" class="Boxes"><img src="/19.jpg" alt="" class="imgs"></div>
+                <div id="Box20" class="Boxes"><img src="/20.jpg" alt="" class="imgs"></div>
             </div>
         </div>
         <div id="BTNNxt">
             Next
         </div>
-        
+
     </div>
 
     <script>
@@ -318,7 +325,7 @@
         let Box20 = document.getElementById("Box20");
         let o = 0;
         let i = null;
-        let MySlideChildArray = [Box1, Box2, Box3,Box4 , Box5 , Box6 , Box7 , Box8 , Box9 , Box10, Box11, Box12, Box13, Box14, Box15, Box16, Box17, Box18, Box19, Box20];
+        let MySlideChildArray = [Box1, Box2, Box3, Box4, Box5, Box6, Box7, Box8, Box9, Box10, Box11, Box12, Box13, Box14, Box15, Box16, Box17, Box18, Box19, Box20];
 
 
 
@@ -326,9 +333,9 @@
         let BTNNxt = document.getElementById("BTNNxt");
 
         function DoNXT() {
-            if (o>19) {
+            if (o > 19) {
                 // o--;
-                o=19;                
+                o = 19;
             } else {
                 o++;
                 console.log(o)
@@ -337,20 +344,20 @@
                 }
                 )
             }
-            
-            
-            
+
+
+
             BTNNxt.addEventListener("mouseup", () => {
-                
+
             })
             i = o;
         }
         let Pop = null;
         function DoNXTAuto() {
-            if (o>19) {
+            if (o > 19) {
                 // o--;
                 // o=19;             
-                o=0;
+                o = 0;
             } else {
                 o++;
                 MySlideChildArray[o].scrollIntoView({
@@ -358,9 +365,9 @@
                 }
                 )
             }
-            
-            
-            
+
+
+
             BTNNxt.addEventListener("mouseup", () => {
 
             })
@@ -368,15 +375,15 @@
         }
         if (i != 19) {
             Pop = setInterval(DoNXTAuto, 2500);
-        } else {  
-                clearInterval(Pop);
+        } else {
+            clearInterval(Pop);
         }
-        
+
         function DoPre() {
-            
-            
-            if (i<1) {
-                i=0;                
+
+
+            if (i < 1) {
+                i = 0;
             } else {
                 i--
                 MySlideChildArray[i].scrollIntoView({
@@ -385,20 +392,20 @@
                 )
             }
             BTNPre.addEventListener("mouseup", () => {
-                
+
             })
-            
+
             o = i;
         }
         BTNNxt.addEventListener("mousedown", () => {
             DoNXT();
         })
-        
+
         BTNPre.addEventListener("mousedown", () => {
             DoPre();
         })
 
-        </script>
+    </script>
 </body>
 
 </html>
