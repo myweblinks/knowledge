@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        user-select: none;
+    }
+    body::before {
+        background: linear-gradient(0deg, rgb(146, 21, 21), rgb(11, 11, 156));
+        content: "";
+        position: absolute;
+        width: 100%;
+        animation: animateBody 15s 0s linear infinite both;
+        height: 100%;
+
+    }
+
+    @keyframes animateBody {
+        from {
+            filter: hue-rotate(0deg);
+        }
+
+        to {
+            filter: hue-rotate(360deg);
+        }
+    }
+
+    #sec {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width: 100%;
+        height: 100vh;
+    }
+
+    #window {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        position: relative;
+        width: 35rem;
+        height: 35rem;
+        border: 2px solid rgb(0, 0, 0);
+        border-radius: 1rem;
+        background-color: rgba(0, 0, 0, 0.281);
+        /* box-shadow: 0px 0px 40px 0px black inset; */
+    }
+
+    .Balls {
+        /* background-color: red; */
+        width: 0.8rem;
+        height: 0.8rem;
+        border-radius: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        animation: animate 0.8s infinite linear;
+    }
+
+    @keyframes animate {
+        from {
+            background-color: red;
+            /* box-shadow: 0px 0px 10px 1px red; */
+
+        }
+
+        to {
+            /* background-color: blue; */
+            opacity: 0;
+        }
+    }
+
+    #Ball1 {
+        animation-delay: 1s;
+        transform: translateY(10px);
+    }
+
+    #Ball2 {
+        animation-delay: 1.1s;
+        transform: translateY(-20px);
+    }
+
+    #Ball3 {
+        animation-delay: 1.2s;
+        transform: translateY(-40px);
+    }
+
+
+    .BallsA {
+        width: 0.8rem;
+        height: 0.8rem;
+        border-radius: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        /* transition: 0s; */
+        animation: animateA 0.8s infinite linear;
+    }
+
+    @keyframes animateA {
+        from {
+            background-color: red;
+            /* box-shadow: 0px 0px 10px 1px red; */
+
+        }
+
+        to {
+            /* background-color: blue; */
+            opacity: 0;
+        }
+    }
+
+    #Ball10 {
+        animation-delay: 1.25s;
+        transform: translateY(-50px);
+    }
+
+    #Ball11 {
+        animation-delay: 1.35s;
+        transform: translateY(-40px);
+    }
+
+    #Ball12 {
+        animation-delay: 1.45s;
+        transform: translateY(-20px);
+    }
+
+    #Ball13 {
+        animation-delay: 1.56s;
+        transform: translateY(10px);
+    }
+
+    #BallP {
+        /* background-color: rgba(255, 0, 0, 0.185); */
+        width: 70%;
+        height: 7rem;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        position: relative;
+    }
+
+    #phone {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        width: 7rem;
+        height: 7.5rem;
+        left: 3.5rem;
+        filter: invert();
+        bottom: 8rem;
+    }
+
+    #earth {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        width: 7rem;
+        height: 5.5rem;
+        right: 3.5rem;
+        filter: invert();
+        bottom: 9rem;
+        filter: brightness(180%) contrast(380%) invert();
+    }
+
+    #h11P{
+        position: absolute;
+        width: 100%;
+        height: 5rem;
+        /* background-color: white; */
+        top: 5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    #h11 {
+        width: 26%;
+        height: 3rem;
+        color: rgb(255, 255, 255);
+        font: caption;
+        font-size: 1.4rem;
+        font-weight: 500;
+        background-color: rgba(0, 0, 0, 0.123);
+        border-radius: 3rem;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        padding-left: 2rem;
+        border: 2px solid white;
+    }
+</style>
+
+<body>
+    <div draggable="false" draggable="false" id="sec">
+        <div draggable="false" id="window">
+            <div draggable="false" id="h11P">
+                <h1 draggable="false" id="h11">Uploading</h1>
+            </div>
+            <img draggable="false" src="/phone.png" id="phone" alt="">
+            <div draggable="false" id="BallP">
+                <div draggable="false" class="Balls" id="Ball1"></div>
+                <div draggable="false" class="Balls" id="Ball2"></div>
+                <div draggable="false" class="Balls" id="Ball3"></div>
+                <div draggable="false" class="BallsA" id="Ball10"></div>
+                <div draggable="false" class="BallsA" id="Ball11"></div>
+                <div draggable="false" class="BallsA" id="Ball12"></div>
+                <div draggable="false" class="BallsA" id="Ball13"></div>
+
+            </div>
+            <img draggable="false" src="/server.png" alt="" id="earth">
+        </div>
+    </div>
+
+    <script>
+        let h11 = document.getElementById("h11");
+        let a = 0;
+        setInterval(() => {
+            if (a == 3) {
+                a = 0;
+            }
+            else {
+                a++;
+            }
+            switch (a) {
+                case 0:
+                    h11.textContent = "Uploading"
+
+                    break;
+                case 1:
+                    h11.textContent = "Uploading."
+                    break;
+                case 2:
+                    h11.textContent = "Uploading.."
+
+                    break;
+                case 3:
+                    h11.textContent = "Uploading..."
+
+                    break;
+                default:
+                    break;
+            }
+        }, 400)
+    </script>
+</body>
+
+</html>
