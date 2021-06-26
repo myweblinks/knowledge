@@ -1,0 +1,402 @@
+/* Changing Scroll Bar Style  */
+
+::-webkit-scrollbar {
+    background-color: rgba(255, 0, 0, 0);
+    width: 0.5rem;
+}
+
+::-webkit-scrollbar-button {
+    background-color: yellow;
+    height: 0;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(122, 122, 122);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
+body {
+    background-color: #111;
+}
+
+nav {
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+}
+
+#Slide {
+    background-color: #222;
+    height: 4rem;
+    width: 70%;
+    border-radius: 4rem;
+    display: grid;
+    grid-template-columns: 4rem 13rem 5rem 6rem 3rem 5rem 6rem 6rem 6rem;
+    align-items: center;
+    grid-gap: 1rem;
+    overflow: hidden;
+}
+
+#IMGProfile {
+    margin: 0.5rem;
+    border-radius: 100%;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+#h1 {
+    display: flex;
+    align-items: center;
+    position: relative;
+    font: caption;
+    font-size: 1.6rem;
+    text-align: center;
+    color: rgb(230, 230, 230);
+    font-weight: 500;
+    grid-column: 2 /span 4;
+}
+
+.QuickBTNs {
+    color: #999;
+    font: caption;
+    font-variant: small-caps;
+    font-weight: 500;
+    font-size: 1.2rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    cursor: pointer;
+    position: relative;
+}
+
+.QuickBTNs:hover {
+    background-color: rgba(255, 0, 0, 0.219);
+}
+
+#Home::after {
+    position: absolute;
+    bottom: 0;
+    content: "";
+    background-color: #777;
+    height: 2px;
+    width: 100%;
+}
+
+#Home {
+    color: #999;
+}
+
+#BTNOfNavSide {
+    height: 3rem;
+    width: 3rem;
+    position: absolute;
+    left: 1rem;
+    border-radius: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.Lines {
+    width: 85%;
+    height: 4px;
+    background-color: #444;
+    position: relative;
+}
+
+#DownloadSec {
+    background-color: #222;
+    height: 20rem;
+    width: 55rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 3rem;
+    overflow: hidden;
+    margin: 3rem auto;
+    border-radius: 1rem;
+    padding-top: 1rem;
+}
+
+#DownloadText {
+    color: rgb(168, 168, 168);
+    font: caption;
+    font-variant: small-caps;
+    font-size: 1.8rem;
+    font-weight: 600;
+    position: absolute;
+    left: 1rem;
+    top: 0.5rem;
+}
+
+#SeeAllTxt {
+    color: rgb(169, 171, 255);
+    font: caption;
+    font-size: 1.3rem;
+    text-decoration: none;
+    position: absolute;
+    right: 2rem;
+    top: 0.5rem;
+}
+
+#DownloadItems {
+    height: 18rem;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    display: grid;
+    grid-gap: 0.5rem;
+    grid-template-columns: 17.5rem 17.5rem 17.5rem;
+    grid-template-rows: 4rem 4rem 4rem 4rem;
+    padding-left: 0.5rem;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.DownloadTiles {
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: rgb(196, 196, 196);
+    border: 1px solid rgb(112, 112, 112);
+    cursor: pointer;
+    border-radius: 3rem;
+    transition: 0.3s;
+}
+
+.DownloadTiles:hover {
+    background-color: rgba(255, 255, 255, 0.151);
+}
+
+.DownloadItemsImg {
+    background-color: rgb(37, 37, 37);
+    height: 3rem;
+    width: 3rem;
+    border-radius: 100%;
+    margin-left: 0.5rem;
+}
+
+.DownloadItemsName {
+    color: rgb(228, 228, 228);
+    font: caption;
+    font-size: 1.3rem;
+    font-weight: 500;
+    width: 75%;
+    height: 2rem;
+    display: flex;
+    text-align: center;
+    white-space: nowrap;
+    align-items: center;
+    overflow: hidden;
+    padding-left: 1rem;
+}
+
+#LatestVideoSec {
+    background-color: #222;
+    height: auto;
+    width: 55rem;
+    margin: 3rem auto;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+#YoutubeMainVid{
+    width: 100%;
+    height: 100%;
+}
+#iFrameForLatestVideo {
+    margin-right: 0rem;
+    margin: 2rem 2rem;
+    height: 12.8rem;
+    width: 28.5rem;
+}
+
+#TiteOfLatestVideo {
+    background-color: rgb(46, 46, 46);
+    width: 29rem;
+    height: 5rem;
+    margin: 2rem 1rem;
+    font: caption;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: rgb(185, 185, 185);
+    white-space: wrap;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0 1rem;
+    border-radius: 1rem;
+    position: relative;
+}
+
+#SubscribeBTN {
+    background-color: rgb(182, 0, 0);
+    width: 8rem;
+    height: 2rem;
+    position: absolute;
+    bottom: -5rem;
+    font: caption;
+    font-size: 1.4rem;
+    color: rgb(214, 214, 214);
+    font-weight: 600;
+    font-variant: small-caps;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+#SubscribeBTN:hover {
+    background-color: rgb(224, 0, 0);
+}
+
+#LatestVideos {
+    background-color: #222;
+    height: 40rem;
+    width: 55rem;
+    margin: 3rem auto;
+    border-radius: 1rem;
+    position: relative;
+    display: grid;
+    grid-template-columns: 17rem 17rem 17rem;
+    grid-template-rows: 3rem 17rem 17rem;
+    justify-content: center;
+    grid-gap: 1rem;
+    align-items: center;
+}
+
+#LatestVideosTitle {
+    color: rgb(168, 168, 168);
+    font: caption;
+    font-variant: small-caps;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-left: 1rem;
+    margin-top: 0.5rem;
+    grid-column: 1 /span 3;
+}
+
+.VideoBoxes {
+    background-color: #222;
+    height: 17rem;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid rgb(83, 83, 83);
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.VideoBoxes:hover{
+    background-color: rgba(255, 255, 255, 0.062);
+    transform: translateY(-7px);
+}
+
+.VideoThumbnails {
+    background-color: #333;
+    width: 100%;
+    height: 10rem;
+}
+
+.VideoTitles {
+    color: rgb(255, 255, 255);
+    font: caption;
+    font-size: 1.2rem;
+    font-weight: 500;
+    display: flex;
+    padding-left: 0.5rem;
+}
+
+footer{
+    background-color: #222;
+    width: 100%;
+    height: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#FooterText{
+    color: rgb(216, 216, 216);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    font: caption;
+    font-weight: 500;
+    bottom: 0%;
+    height: 2rem;
+    margin: 0rem auto;
+    width: 100%;
+}
+
+.SocialPlate{
+    color: rgb(189, 189, 189);
+    font: caption;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-size: 1rem;
+    font-variant: small-caps;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.SocialPlate:hover{
+    color: rgb(221, 221, 221);
+}
+
+@media screen and (max-width: 720px){
+    #BTNOfNavSide{
+        width: 1.7rem;
+        height: 1.7rem;
+    }
+    #Slide{
+        height: 2.1rem;
+    }
+    #IMGProfile{
+        width: 1.7rem;
+        height: 1.7rem;
+        margin: 0.2rem 0.3rem;
+    }
+    #h1{
+        font-size: 1rem;
+        grid-column: 2/span 2;
+    }
+    #Slide{
+        grid-template-columns: 2rem 8rem 2rem 4rem 4rem 4rem;
+    }
+    .QuickBTNs{
+        font-size: 1rem;
+        height: 1.8rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
