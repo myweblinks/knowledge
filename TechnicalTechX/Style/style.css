@@ -43,6 +43,7 @@ nav {
     align-items: center;
     grid-gap: 1rem;
     overflow: hidden;
+    position: relative;
 }
 
 #IMGProfile {
@@ -465,5 +466,86 @@ footer {
     }
     .VideoBoxes {
         height: 16rem;
+    }
+}
+
+@media screen and (max-width: 665px) {
+    #Slide {
+        grid-template-columns: 1.5rem 4rem 4rem 4rem 4rem 4rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .QuickBTNs {
+        display: none;
+    }
+    #BTNForHiddenEle {
+        width: 1.5rem;
+        height: 1.5rem;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+        position: absolute;
+        right: 1rem;
+    }
+    .LinesOfBTNHidden {
+        width: 5px;
+        height: 5px;
+        background-color: rgb(190, 190, 190);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 100%;
+    }
+    #LatestVideoSec {
+        width: 26rem;
+        border-radius: 0.5rem;
+        overflow: hidden;
+        height: 10rem;
+    }
+    #YoutubeMainVid {
+        width: 10rem;
+        margin: 0%;
+        height: 5.8rem;
+    }
+    #iFrameForLatestVideo {
+        width: 10rem;
+    }
+    #TiteOfLatestVideo {
+        width: 20rem;
+        font-size: 0.7rem;
+    }
+    #SubscribeBTN {
+        bottom: -3rem;
+    }
+    #DownloadSec {
+        width: 26rem;
+    }
+    #DownloadText {
+        font-size: 1rem;
+    }
+    #SeeAllTxt {
+        font-size: 1rem;
+    }
+    #DownloadItems {
+        grid-template-columns: 11rem 11rem;
+        grid-template-rows: 2.5rem 2.5rem 2.5rem 2.5rem 2.5rem 2.5rem;
+    }
+    .DownloadItemsName {
+        font-size: 0.9rem;
+    }
+    #LatestVideos {
+        width: 26rem;
+        grid-template-columns: 12rem 12rem;
+    }
+    #LatestVideosTitle {
+        font-size: 1rem;
+    }
+    .VideoThumbnails {
+        height: 7rem;
+    }
+    .VideoTitles {
+        font-size: 1rem;
     }
 }
