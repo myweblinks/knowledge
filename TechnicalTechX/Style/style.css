@@ -222,10 +222,11 @@ nav {
     overflow: hidden;
 }
 
-#YoutubeMainVid{
+#YoutubeMainVid {
     width: 100%;
     height: 100%;
 }
+
 #iFrameForLatestVideo {
     margin-right: 0rem;
     margin: 2rem 2rem;
@@ -310,7 +311,7 @@ nav {
     transition: 0.2s;
 }
 
-.VideoBoxes:hover{
+.VideoBoxes:hover {
     background-color: rgba(255, 255, 255, 0.062);
     transform: translateY(-7px);
 }
@@ -330,7 +331,7 @@ nav {
     padding-left: 0.5rem;
 }
 
-footer{
+footer {
     background-color: #222;
     width: 100%;
     height: 6rem;
@@ -340,7 +341,7 @@ footer{
     position: relative;
 }
 
-#FooterText{
+#FooterText {
     color: rgb(216, 216, 216);
     display: flex;
     justify-content: center;
@@ -354,7 +355,7 @@ footer{
     width: 100%;
 }
 
-.SocialPlate{
+.SocialPlate {
     color: rgb(189, 189, 189);
     font: caption;
     font-weight: 600;
@@ -368,35 +369,102 @@ footer{
     transition: 0.2s;
 }
 
-.SocialPlate:hover{
+.SocialPlate:hover {
     color: rgb(221, 221, 221);
 }
 
-@media screen and (max-width: 720px){
-    #BTNOfNavSide{
+@media screen and (max-width: 720px) {
+    #BTNOfNavSide {
         width: 1.7rem;
         height: 1.7rem;
     }
-    #Slide{
+    #Slide {
         height: 2.1rem;
     }
-    #IMGProfile{
+    #IMGProfile {
         width: 1.7rem;
         height: 1.7rem;
         margin: 0.2rem 0.3rem;
     }
-    #h1{
+    #h1 {
         font-size: 1rem;
         grid-column: 2/span 2;
     }
-    #Slide{
+    #Slide {
         grid-template-columns: 2rem 8rem 2rem 4rem 4rem 4rem;
     }
-    .QuickBTNs{
+    .QuickBTNs {
         font-size: 1rem;
         height: 1.8rem;
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+    #LatestVideoSec {
+        width: 36rem;
+        height: 12rem;
+        margin: 1rem auto;
+    }
+    #YoutubeMainVid {
+        width: 14rem;
+        height: 8rem;
+        margin: 0vw;
+    }
+    #TiteOfLatestVideo {
+        width: 28rem;
+        height: 3rem;
+        border-radius: 0.5rem;
+        font-size: 0.9rem;
+    }
+    #SubscribeBTN {
+        width: 6rem;
+        font-size: 1.2rem;
+        height: 1.8rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #DownloadItems {
+        height: 19rem;
+        grid-template-columns: 16rem 16rem;
+        grid-template-rows: 2.5rem 2.5rem 2.5rem 2.5rem 2.5rem 2.5rem;
+    }
+    #DownloadSec {
+        width: 36rem;
+        height: 22rem;
+    }
+    .DownloadItemsImg {
+        width: 2rem;
+        height: 2rem;
+        margin: 0;
+    }
+    #DownloadText {
+        font-size: 1.5rem;
+    }
+    #SeeAllTxt {
+        font-size: 1.2rem;
+    }
+    .DownloadItemsName {
+        font-size: 1rem;
+        padding: 0;
+    }
+    #LatestVideos {
+        width: 36rem;
+        height: 60rem;
+        grid-template-columns: 15rem 15rem;
+        grid-template-rows: 2rem 17.5rem 17.5rem 17.5rem;
+    }
+    #LatestVideosTitle {
+        grid-column: 1/span 2;
+        font-size: 1.5rem;
+    }
+    #SeeAllTxt {
+        height: 2rem;
+    }
+    .VideoTitles {
+        font-size: 1rem;
+    }
+    .VideoBoxes {
+        height: 16rem;
     }
 }
