@@ -83,39 +83,41 @@ let HiddenEle = document.getElementById("HiddenEle");
 let QuickBTNs2 = document.getElementById("QuickBTNs2");
 let SlideSide = document.getElementById("SlideSide");
 
-BTNForHiddenEle.addEventListener("click", ()=>{
-    if (h1.style.paddingTop!="0.5rem") {
-        h1.style.paddingTop="0.5rem";
-        h1.style.alignItems="unset";
-        Slide.style.alignItems="unset";
-        Slide.style.borderRadius="0.1rem";
-        Slide.style.height="5rem";
-        BTNForHiddenEle.style.marginTop="0.30rem"
-        HiddenEle.style.display="flex"
+BTNForHiddenEle.addEventListener("click", () => {
+    if (h1.style.paddingTop != "0.5rem") {
+        h1.style.paddingTop = "0.5rem";
+        h1.style.alignItems = "unset";
+        Slide.style.alignItems = "unset";
+        Slide.style.borderRadius = "0.1rem";
+        Slide.style.height = "5rem";
+        BTNForHiddenEle.style.marginTop = "0.30rem"
+        HiddenEle.style.display = "flex"
     } else {
-        h1.style.paddingTop="unset";
-        h1.style.alignItems="center";
-        Slide.style.borderRadius="2rem";
-        Slide.style.height="2rem";
-        BTNForHiddenEle.style.marginTop="unset"
-        Slide.style.alignItems="center";
-        HiddenEle.style.display="none"
+        h1.style.paddingTop = "unset";
+        h1.style.alignItems = "center";
+        Slide.style.borderRadius = "2rem";
+        Slide.style.height = "2rem";
+        BTNForHiddenEle.style.marginTop = "unset"
+        Slide.style.alignItems = "center";
+        HiddenEle.style.display = "none"
     }
-    
+
 })
 
 //All Variable Of BTNOfNavSide
 let BTNOfNavSide = document.getElementById("BTNOfNavSide");
 
-BTNOfNavSide.addEventListener("click", ()=>{
-    if (SlideSide.style.left!="0%") {
-        SlideSide.style.left="0%"
-        SlideSide.style.display="flex"
+BTNOfNavSide.addEventListener("click", () => {
+    if (SlideSide.className != "Come1") {
+        // SlideSide.style.left="0%"
+        // SlideSide.style.display="grid"
+        SlideSide.className = "Come1"
     } else {
-        SlideSide.style.left="-100%"
-        SlideSide.style.display="none"
-        
+        // SlideSide.style.left="-100%"
+        // SlideSide.style.display="none"
+        SlideSide.className = "Gone1"
+
     }
-    
+
 })
 
