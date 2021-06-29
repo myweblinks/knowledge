@@ -608,7 +608,7 @@ footer {
         top: 0.5rem;
     }
     #SlideSide {
-        width: 60%;
+        width: 80%;
         padding-top: 1.5rem;
         grid-template-columns: 8rem;
         grid-gap: 0.2rem;
