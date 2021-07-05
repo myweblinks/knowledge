@@ -1,0 +1,494 @@
+* {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    outline: none;
+    transition: 0.5s;
+}
+
+::-webkit-scrollbar {
+    background-color: rgba(255, 0, 0, 0);
+    width: 0.7rem;
+}
+
+::-webkit-scrollbar-button {
+    background-color: rgba(255, 255, 0, 0);
+    height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #666;
+    border-radius: 10px;
+}
+
+body {
+    background-color: #252525;
+}
+
+#sec {
+    width: 100%;
+    height: auto;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    /* background-color: black; */
+    overflow: hidden;
+    flex-wrap: wrap;
+}
+
+#sec::before {
+    background: linear-gradient(220deg, rgb(0, 0, 0), rgb(255, 17, 0));
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    opacity: 0.6;
+    opacity: 0.9;
+    content: "";
+    width: 100%;
+    height: 200vh;
+}
+
+nav {
+    width: 100%;
+    height: 4rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    background-color: #0000005b;
+}
+
+nav::before {
+    content: "";
+    background: linear-gradient(to right, transparent, rgba(255, 0, 0, 0.774), rgba(0, 0, 0, 0));
+    width: 10%;
+    height: 0.2rem;
+    position: absolute;
+    bottom: 0;
+    animation: AniLineBottonNav 12s 0s ease-in-out infinite;
+}
+
+@keyframes animateAfter {
+    from {}
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes AniLineBottonNav {
+    0% {
+        transform: scaleX(0);
+        transform-origin: left;
+        width: 10%;
+    }
+    50% {
+        transform: scaleX(1);
+        transform-origin: left;
+        /* width:40%; */
+    }
+    50.1% {
+        transform: scaleX(1);
+        /* width: 5%; */
+        transform-origin: right;
+    }
+    100% {
+        width: 100%;
+        transform-origin: right;
+        transform: scaleX(0);
+    }
+}
+
+#Profile {
+    border-radius: 100%;
+    height: 3rem;
+    width: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 0.5rem;
+    z-index: 1;
+    border: 3px dotted rgb(94, 94, 94);
+}
+
+#h1 {
+    font: caption;
+    font-weight: 100;
+    font-size: 1.6rem;
+    color: white;
+    position: relative;
+    left: 1rem;
+    font-family: Lato, sans-serif;
+    font-weight: 300;
+    line-height: 1.333;
+}
+
+.QuickBtnS {
+    font: caption;
+    font-size: 1.2rem;
+    color: rgb(218, 218, 218);
+    font-weight: 300;
+    width: auto;
+    position: relative;
+    cursor: pointer;
+}
+
+.QuickBtnS:hover {
+    color: honeydew;
+}
+
+.QuickBtnS1 {
+    font: caption;
+    font-size: 1.2rem;
+    color: rgb(218, 218, 218);
+    font-weight: 300;
+    width: auto;
+    position: relative;
+    cursor: pointer;
+}
+
+.QuickBtnS1:hover {
+    color: honeydew;
+}
+
+#p1 {
+    width: 20rem;
+    height: 4rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    right: 0;
+}
+
+#MoreBTN {
+    font: caption;
+    font-size: 1.2rem;
+    color: rgb(223, 223, 223);
+    font-weight: 300;
+    width: 4rem;
+    position: relative;
+    cursor: pointer;
+    display: none;
+}
+
+#Ab1 {
+    position: absolute;
+    width: 2px;
+    height: 10px;
+    background-color: whitesmoke;
+    content: "";
+    transform: rotate(40deg);
+    right: 0;
+    top: 0.4rem;
+    overflow: hidden;
+}
+
+#Ab2 {
+    position: absolute;
+    width: 2px;
+    height: 10px;
+    background-color: whitesmoke;
+    content: "";
+    right: 6px;
+    top: 0.4rem;
+    transform: rotate(-40deg);
+    overflow: hidden;
+}
+
+.ACome {
+    animation: AniA 0.2s ease-in-out 1 both;
+}
+
+@keyframes AniA {
+    from {
+        transform: rotate(40deg);
+    }
+    to {
+        transform: rotate(140deg);
+    }
+}
+
+.AGone {
+    animation: AniAGone 0.2s ease-in-out 1 both;
+}
+
+@keyframes AniAGone {
+    from {
+        transform: rotate(140deg);
+    }
+    to {
+        transform: rotate(40deg);
+    }
+}
+
+.BCome {
+    animation: BniA 0.2s ease-in-out 1 both;
+}
+
+@keyframes BniA {
+    from {
+        transform: rotate(-40deg);
+    }
+    to {
+        transform: rotate(-140deg);
+    }
+}
+
+.BGone {
+    animation: BniAGone 0.2s ease-in-out 1 both;
+}
+
+@keyframes BniAGone {
+    from {
+        transform: rotate(-140deg);
+    }
+    to {
+        transform: rotate(-40deg);
+    }
+}
+
+#windowUnderBTN {
+    background-color: #212121;
+    width: 8rem;
+    height: auto;
+    position: absolute;
+    top: 80%;
+    right: 3.2rem;
+    display: none;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1110;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+#HiddenEleBTN {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 100%;
+    background-color: rgba(0, 0, 0, 0.199);
+    cursor: pointer;
+    border: none;
+}
+
+.Lines {
+    background-color: rgb(136, 136, 136);
+    width: 1.7rem;
+    height: 4px;
+    margin: 0.15rem 0;
+}
+
+#Page {
+    width: 100%;
+    border-radius: 2rem;
+    height: auto;
+    display: flex;
+    position: relative;
+    opacity: 1;
+    margin: 3rem auto;
+}
+
+#Win2 {
+    background-color: rgba(0, 0, 0, 0.377);
+    width: 50rem;
+    height: 50rem;
+    margin-left: 2rem;
+    border: 2px solid rgb(54, 54, 54);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#LatestVidP1 {
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    width: 100%;
+    height: 20rem;
+    flex-wrap: wrap;
+}
+
+#YoutubeVidPlayer {
+    width: 21rem;
+    height: 12rem;
+    margin: auto 1rem;
+}
+
+#YoutubeVidName {
+    color: rgb(187, 187, 187);
+    font: caption;
+    font-size: 1.2rem;
+    font-weight: 500;
+    width: 23rem;
+    background-color: #222;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 1rem;
+    margin: 4.2rem auto;
+    position: relative;
+}
+
+#SubscribeBTN {
+    background-color: rgb(182, 0, 0);
+    width: 8rem;
+    height: 2rem;
+    position: absolute;
+    bottom: -4.5rem;
+    font: caption;
+    font-size: 1.4rem;
+    color: rgb(214, 214, 214);
+    font-weight: 600;
+    font-variant: small-caps;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.5s;
+    box-shadow: 0px 0px 2px 1px red, 0px 0px 20px 1px red, 0px 0px 55px 1px red;
+}
+
+#SubscribeBTN:hover {
+    background-color: rgb(224, 0, 0);
+}
+
+@media screen and (max-width: 850px) {
+    #Win2{
+        margin: 0%;
+    }
+    #Page {
+        align-items: center;
+        justify-content: center;
+    }
+    #YoutubeVidPlayer{
+        width: 17rem;
+        height: 10rem;
+    }
+    #LatestVidP1{
+        /* background-color: red; */
+        height: 13rem;
+    }
+    #YoutubeVidName{
+        width: 19rem;
+        height: 3rem;
+        padding: 0.5rem;
+        font-size: 1rem;
+        margin-top: 2rem;
+        margin: 2rem 1rem;
+        margin-left: 0;
+    }
+    #SubscribeBTN{
+        bottom: -4rem;
+    }
+}
+
+@media screen and (max-width: 644px) {
+    #YoutubeVidPlayer{
+        width: 14rem;
+        height: 8rem;
+        margin: 1rem 0.5rem;
+    }
+    #YoutubeVidName{
+        width: 40%;
+        margin-top: 1rem;
+        font-size: 0.8rem;
+    }
+    #SubscribeBTN{
+        bottom: -3rem;
+        width: 6rem;
+        height: 1.5rem;
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #MoreBTN {
+        display: flex;
+    }
+    #Quick3 {
+        display: none;
+    }
+    .QuickBtnS {
+        margin: 0.2rem 0;
+    }
+    .QuickBtnS1 {
+        margin: 0.5rem 0;
+    }
+    #Quick11 {
+        display: none;
+    }
+    #Quick12 {
+        display: none;
+    }
+    nav:hover {
+        box-shadow: unset;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    #Quick11 {
+        display: none;
+    }
+    #Quick12 {
+        display: flex;
+    }
+    #Quick2 {
+        display: none;
+    }
+    #p1 {
+        width: 14rem;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    #Quick11 {
+        display: flex;
+    }
+    #Quick1 {
+        display: none;
+    }
+    #Quick12 {
+        display: flex;
+    }
+    #Quick2 {
+        display: none;
+    }
+    #p1 {
+        width: 10rem;
+    }
+}
+
+@media screen and (max-width: 456px) {
+    #YoutubeVidName{
+        width: 90%;
+        height: auto;
+        margin-left: 0.5rem;
+        font-size: 1rem;
+    }
+    #YoutubeVidPlayer{
+        width: 18rem;
+        height: 10rem;
+    }
+}
+
+@media screen and (max-width: 410px) {
+    #p1 {
+        position: relative;
+        justify-content: space-around;
+    }
+    #h1 {
+        width: 10rem;
+        font-size: 1.2rem;
+        left: 0;
+    }
+}
