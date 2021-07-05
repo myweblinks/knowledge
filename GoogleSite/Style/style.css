@@ -3,7 +3,7 @@
     padding: 0;
     user-select: none;
     outline: none;
-    transition: 0.5s;
+    transition: 0.5s;   
 }
 
 ::-webkit-scrollbar {
@@ -320,6 +320,7 @@ nav::before {
     width: 21rem;
     height: 12rem;
     margin: auto 1rem;
+    position: relative;
 }
 
 #YoutubeVidName {
@@ -360,6 +361,29 @@ nav::before {
 
 #SubscribeBTN:hover {
     background-color: rgb(224, 0, 0);
+}
+
+#ThumbnailOfLatestVid{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#WatchOn{
+    font: caption;
+    font-size: 1.2rem;
+    height: 3rem;
+    width: 100%;
+    position: absolute;
+    bottom: 0rem;
+    margin: auto;
+    color: rgb(199, 199, 199);
+    font-weight: 700;
+    background-color: rgba(0, 0, 0, 0.692);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 }
 
 @media screen and (max-width: 850px) {
