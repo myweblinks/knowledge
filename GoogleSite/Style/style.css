@@ -470,14 +470,14 @@ nav::before {
 
 @media screen and (max-width: 456px) {
     #YoutubeVidName{
-        width: 90%;
-        height: auto;
+        width: 10rem;
+        height: 2rem;
         margin-left: 0.5rem;
-        font-size: 1rem;
+        font-size: 0.7rem;
     }
     #YoutubeVidPlayer{
-        width: 18rem;
-        height: 10rem;
+        width: 12rem;
+        height: 7rem;
     }
 }
 
