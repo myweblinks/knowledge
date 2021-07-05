@@ -6,261 +6,55 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="Files/Profile.png" type="image/x-icon">
+    <link rel="stylesheet" href="Style/style.css">
     <title>Technical TechX</title>
 </head>
-<style>
-    * {
-        margin: 0;
-        padding: 0;
-        user-select: none;
-    }
-
-    #sec {
-        width: 100%;
-        height: 100vh;
-        display: flex;
-        position: relative;
-        justify-content: center;
-        background-color: black;
-    }
-
-    #sec::before {
-        background: url(Files/back.jpg);
-        background-position: center;
-        background-size: cover;
-        opacity: 0.4;
-        position: absolute;
-        content: "";
-        width: 100%;
-        height: 100%;
-    }
-
-    nav {
-        width: 100%;
-        height: 4rem;
-        position: relative;
-        display: flex;
-        align-items: center;
-        flex-direction: row;
-    }
-
-    nav:hover {
-        box-shadow: 0px 10px 10px 1px rgba(0, 0, 0, 0.432);
-    }
-
-    #Profile {
-        border-radius: 100%;
-        height: 3rem;
-        width: 3rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        margin: 0.5rem;
-    }
-
-    #h1 {
-        font: caption;
-        font-weight: 100;
-        font-size: 1.6rem;
-        color: white;
-        position: relative;
-        left: 1rem;
-        font-family: Lato, sans-serif;
-        font-weight: 300;
-        line-height: 1.333;
-    }
-
-    .QuickBtnS {
-        font: caption;
-        font-size: 1.2rem;
-        color: rgb(218, 218, 218);
-        font-weight: 300;
-        width: auto;
-        position: relative;
-        cursor: pointer;
-    }
-
-    .QuickBtnS:hover {
-        color: honeydew;
-    }
-
-    #p1 {
-        width: 20rem;
-        height: 4rem;
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        position: absolute;
-        right: 0;
-    }
-
-    #MoreBTN {
-        font: caption;
-        font-size: 1.2rem;
-        color: rgb(223, 223, 223);
-        font-weight: 300;
-        width: 4rem;
-        position: relative;
-        cursor: pointer;
-        display: none;
-    }
-
-    #MoreBTN::after {
-        position: absolute;
-        width: 2px;
-        height: 10px;
-        background-color: whitesmoke;
-        content: "";
-        transform: rotate(40deg);
-        right: 0;
-        top: 0.4rem;
-
-    }
-
-    #MoreBTN::before {
-        position: absolute;
-        width: 2px;
-        height: 10px;
-        background-color: whitesmoke;
-        content: "";
-        right: 6px;
-        top: 0.4rem;
-        transform: rotate(-40deg);
-
-
-    }
-
-    #windowUnderBTN {
-        background-color: #212121;
-        width: 8rem;
-        height: auto;
-        position: absolute;
-        top: 130%;
-        right: 0rem;
-        display: none;
-        justify-content: space-evenly;
-        align-items: center;
-        flex-direction: column;
-        z-index: 1110;
-        overflow: hidden;
-
-    }
-
-    @media screen and (max-width: 600px) {
-        #MoreBTN {
-            display: flex;
-        }
-
-        #Quick3 {
-            display: none;
-        }
-
-        .QuickBtnS {
-            margin: 0.5rem 0;
-        }
-
-        #Quick11 {
-            display: none;
-        }
-
-        #Quick12 {
-            display: none;
-        }
-
-        nav:hover {
-            box-shadow: unset;
-        }
-    }
-
-    @media screen and (max-width: 550px) {
-        #Quick11 {
-            display: none;
-        }
-
-        #Quick12 {
-            display: flex;
-        }
-
-        #Quick2 {
-            display: none;
-        }
-
-        #p1 {
-            width: 12rem;
-        }
-    }
-
-    @media screen and (max-width: 460px) {
-        #Quick11 {
-            display: flex;
-        }
-
-        #Quick1 {
-            display: none;
-        }
-
-        #Quick12 {
-            display: flex;
-        }
-
-        #Quick2 {
-            display: none;
-        }
-
-        #p1 {
-            width: 7rem;
-        }
-
-    }
-
-    @media screen and (max-width: 360px) {
-        #p1 {
-            position: relative;
-        }
-
-        #h1 {
-            width: 10rem;
-            font-size: 1.2rem;
-            left: 0;
-        }
-    }
-</style>
 
 <body>
     <div id="sec">
+
         <nav>
-            <img src="Files/Profile.png" alt="" id="Profile">
+            <img src="FIles/Profile.png" alt="" id="Profile">
             <h1 id="h1">Technical TechX</h1>
             <div id="p1">
                 <div class="QuickBtnS" id="Quick1">Home</div>
                 <div class="QuickBtnS" id="Quick2">Videos</div>
                 <div class="QuickBtnS" id="Quick3">Blogs</div>
                 <div id="MoreBTN">More
-
-                    <div id="windowUnderBTN">
-
-                        <div class="QuickBtnS" id="Quick11">Home</div>
-                        <div class="QuickBtnS" id="Quick12">Videos</div>
-                        <div class="QuickBtnS" id="Quick13">Blogs</div>
-                    </div>
+                    <div id="Ab1" class="non"></div>
+                    <div id="Ab2" class="non"></div>
                 </div>
+                <div id="windowUnderBTN">
+                    <div class="QuickBtnS1" id="Quick11">Home</div>
+                    <div class="QuickBtnS1" id="Quick12">Videos</div>
+                    <div class="QuickBtnS1" id="Quick13">Blogs</div>
+                </div>
+                <button id="HiddenEleBTN">
+                    <div class="Lines" id="Line1"></div>
+                    <div class="Lines" id="Line2"></div>
+                    <div class="Lines" id="Line3"></div>
+                </button>
             </div>
         </nav>
+
+        <!-- Sec 2nd -->
+        <div id="Page">
+            <div id="Win2">
+                <!-- Latest Video -->
+                <div id="LatestVidP1">
+                    <iframe id="YoutubeVidPlayer" src="https://www.youtube.com/embed/OKbxnDI3z70"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+
+                        <h4 id="YoutubeVidName">Top 10 VIDEO EDITING Apps For Android | By Technical TechX 🔥 <a href="#" id="SubscribeBTN">
+                            Subscribe
+                        </a></h4>
+                </div>
+            </div>
+        </div>
     </div>
-    <script>
-        let MoreBTN = document.getElementById("MoreBTN");
-        let windowUnderBTN = document.getElementById("windowUnderBTN");
-
-        MoreBTN.addEventListener("click", () => {
-            if (windowUnderBTN.style.display != "flex") {
-                windowUnderBTN.style.display = "flex"
-            } else {
-                windowUnderBTN.style.display = "none"
-            }
-        });
-
-    </script>
+    <script src="Script/script.js"></script>
 </body>
 
 </html>
