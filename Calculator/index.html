@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style/style.css">
+    <title>Android Ripple</title>
+</head>
+
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
+body {
+    background-color: #111;
+}
+
+#sec {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#window {
+    background-color: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 25rem;
+    height: 35rem;
+    border: 2px solid white;
+    border-radius: 10px;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+#Display {
+    background-color: rgb(39, 39, 39);
+    width: 100%;
+    height: 8rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+    z-index: 1;
+    overflow: hidden;
+}
+
+#DisAfter {
+    width: 10rem;
+    height: 10rem;
+    background-color: #111;
+    border-radius: 100%;
+    position: absolute;
+    right: -100%;
+    top: -100%;
+    display: none;
+    animation: AniBigAfter 0.4s ease-in-out 1;
+    width: 60rem;
+    height: 60rem;
+}
+
+@keyframes AniBigAfter {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1);
+    }
+}
+
+#TextDisplay {
+    position: absolute;
+    right: 1rem;
+    font: caption;
+    font-weight: 100;
+    font-size: 3rem;
+    font-weight: 100;
+    color: white;
+    z-index: 12;
+    width: auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    text-align: right;
+    white-space: nowrap;
+}
+
+#CALBTN {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 19rem;
+    height: 27rem;
+    background-color: #111;
+    flex-wrap: wrap;
+}
+
+.BTNs {
+    color: white;
+    width: 5.9rem;
+    height: 5.9rem;
+    font: caption;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.2rem 0.2rem;
+    cursor: default;
+    position: relative;
+    z-index: 12;
+    border-radius: 100%;
+}
+
+.text {
+    position: relative;
+    z-index: 14;
+}
+
+.Rips {
+    background-color: #222;
+    width: 6rem;
+    height: 6rem;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 8;
+    border-radius: 100%;
+    animation: AniRip 0.4s 0s ease 1;
+}
+
+span {
+    background-color: #222;
+    width: 6rem;
+    height: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 8;
+    border-radius: 100%;
+}
+
+@keyframes AniRip {
+    0% {
+        width: 3rem;
+        opacity: 0;
+        height: 3rem;
+    }
+    50% {
+        opacity: 1;
+        height: 6rem;
+        width: 6rem;
+    }
+    100% {
+        opacity: 0;
+        height: 6rem;
+        width: 6rem;
+    }
+}
+
+#Slide {
+    width: 6rem;
+    height: 27rem;
+    background-color: rgb(46, 46, 46);
+    display: flex;
+    align-items: center;
+    position: relative;
+    flex-direction: column;
+}
+
+.SlideRightBTNs {
+    width: 4.7rem;
+    height: 5rem;
+    border-radius: 100%;
+    background-color: #222;
+    margin: 0.2rem;
+    font: caption;
+    font-size: 2rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+}
+</style>
+
+<body>
+    <div id="sec">
+        <div id="window">
+            <div id="Display">
+                <div id="DisAfter"></div>
+                <div id="TextDisplay"></div>
+            </div>
+            <div id="CALBTN">
+                <div class="BTNs" id="BTN1"><div class="text">1</div><div id="Rip1" class="Rips"></div></div>
+                <div class="BTNs" id="BTN2"><div class="text">2</div><div id="Rip2" class="Rips"></div></div>
+                <div class="BTNs" id="BTN3"><div class="text">3</div><div id="Rip3" class="Rips"></div></div>
+                <div class="BTNs" id="BTN4"><div class="text">4</div><div id="Rip4" class="Rips"></div></div>
+                <div class="BTNs" id="BTN5"><div class="text">5</div><div id="Rip5" class="Rips"></div></div>
+                <div class="BTNs" id="BTN6"><div class="text">6</div><div id="Rip6" class="Rips"></div></div>
+                <div class="BTNs" id="BTN7"><div class="text">7</div><div id="Rip7" class="Rips"></div></div>
+                <div class="BTNs" id="BTN8"><div class="text">8</div><div id="Rip8" class="Rips"></div></div>
+                <div class="BTNs" id="BTN9"><div class="text">9</div><div id="Rip9" class="Rips"></div></div>
+                <div class="BTNs" id="BTN10"><div class="text">.</div><div id="Rip10" class="Rips"></div></div>
+                <div class="BTNs" id="BTN11"><div class="text">0</div><div id="Rip11" class="Rips"></div></div>
+                <div class="BTNs" id="BTN12"><div class="text">=</div><div id="Rip12" class="Rips"></div></div>
+            </div>
+            <div id="Slide">                
+                <div class="SlideRightBTNs" id="SlideBTN1">C</div>
+                <div class="SlideRightBTNs" id="SlideBTN2">/</div>
+                <div class="SlideRightBTNs" id="SlideBTN3">x</div>
+                <div class="SlideRightBTNs" id="SlideBTN4">-</div>
+                <div class="SlideRightBTNs" id="SlideBTN5">+</div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        
+let BTN1 = document.getElementById("BTN1");
+let BTN2 = document.getElementById("BTN2");
+let BTN3 = document.getElementById("BTN3");
+let BTN4 = document.getElementById("BTN4");
+let BTN5 = document.getElementById("BTN5");
+let BTN6 = document.getElementById("BTN6");
+let BTN7 = document.getElementById("BTN7");
+let BTN8 = document.getElementById("BTN8");
+let BTN9 = document.getElementById("BTN9");
+let BTN10 = document.getElementById("BTN10");
+let BTN11 = document.getElementById("BTN11");
+let BTN12 = document.getElementById("BTN12");
+let BTN13 = document.getElementById("BTN13");
+let Rip1 = document.getElementById("Rip1");
+let Rip2 = document.getElementById("Rip2");
+let Rip3 = document.getElementById("Rip3");
+let Rip4 = document.getElementById("Rip4");
+let Rip5 = document.getElementById("Rip5");
+let Rip6 = document.getElementById("Rip6");
+let Rip7 = document.getElementById("Rip7");
+let Rip8 = document.getElementById("Rip8");
+let Rip9 = document.getElementById("Rip9");
+let SlideBTN2 = document.getElementById("SlideBTN2");
+let SlideBTN3 = document.getElementById("SlideBTN3");
+let SlideBTN4 = document.getElementById("SlideBTN4");
+let SlideBTN5 = document.getElementById("SlideBTN5");
+let DisAfter = document.getElementById("DisAfter");
+let TextDisplay = document.getElementById("TextDisplay");
+let SlideBTN1 = document.getElementById("SlideBTN1");
+
+let MyArray = [BTN1, BTN2, BTN3, BTN4, BTN5, BTN6, BTN7, BTN8, BTN9, BTN10, BTN11, BTN12];
+let MyArray1 = [Rip1, Rip2, Rip3, Rip4, Rip5, Rip6, Rip7, Rip8, Rip9, Rip10, Rip11, Rip12];
+
+for (let i = 0; i < MyArray.length; i++) {
+    MyArray[i].addEventListener("click", () => {
+        MyArray1[i].style.display = "flex";
+        setTimeout(() => { MyArray1[i].style.display = "none"; }, 400);
+        let TextBTN = MyArray[i].textContent;
+        TextDisplay.textContent += TextBTN;
+        console.log(SlideBTN2.textContent)
+    })
+}
+
+let SideBTNArray = [SlideBTN2, SlideBTN3, SlideBTN4, SlideBTN5];
+
+for (let i = 0; i < SideBTNArray.length; i++) {
+    SideBTNArray[i].addEventListener("click", () => {
+        let TextBTN = SideBTNArray[i].textContent;
+        TextDisplay.textContent += TextBTN;
+
+    })
+
+}
+
+SlideBTN1.addEventListener("click", () => {
+    DisAfter.style.display = "flex"
+    setTimeout(() => { DisAfter.style.display = "none"; }, 400);
+    TextDisplay.textContent = "";
+})
+
+    </script>
+</body>
+
+</html>
