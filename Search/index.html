@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search!</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        outline: none;
+        user-select: none;
+        z-index: 12;
+    }
+
+    body {
+        background-color: #111;
+    }
+
+    #sec {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    #window {
+        width: 100%;
+        height: 10rem;
+        /* border: 2px solid white; */
+        border-radius: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        background-color: #222;
+        box-shadow: 10px 10px 20px black;
+    }
+
+    #p1 {
+        width: 2rem;
+        height: 3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    .WidthUpP1 {
+        animation: AniWidthUp 0.7s 0s ease-in-out 1 both;
+    }
+
+    .WidthDownP1 {
+        animation: AniWidthDown reverse 0.7s 0s ease-in-out 1 both;
+    }
+
+    @keyframes AniWidthUp {
+        from {
+            width: 2rem;
+        }
+
+        to {
+            width: 90%;
+        }
+    }
+
+    @keyframes AniWidthDown {
+        from {
+            width: 2rem;
+        }
+
+        to {
+            width: 90%;
+        }
+    }
+
+    #SearchText {
+        position: relative;
+        width: 100%;
+        height: 2rem;
+        font: caption;
+        font-size: 1rem;
+        font-weight: 600;
+        color: white;
+        background-color: rgb(26, 26, 26);
+        border: rgb(0, 0, 0);
+        border-radius: 2rem;
+        box-shadow: 0px 0px 10px black inset;
+        padding-left: 2rem;
+    }
+
+    #SearchBTN {
+        width: 2rem;
+        height: 2rem;
+        position: absolute;
+        left: 0rem;
+        border-radius: 100%;
+    }
+
+    #SearchBTN::after {
+        content: "";
+        border: 2px solid white;
+        width: 0.8rem;
+        height: 0.8rem;
+        position: absolute;
+        border-radius: 100%;
+        top: 18%;
+        left: 14%;
+    }
+
+    #SearchBTN::before {
+        content: "";
+        border: 1px solid white;
+        width: 0;
+        background-color: white;
+        height: 0.5rem;
+        position: absolute;
+        top: 18%;
+        left: 14%;
+        transform: rotate(-45deg) translate(3px, 20px);
+    }
+
+    #CutBTN {
+        background-color: #111;
+        width: 2rem;
+        height: 2rem;
+        position: absolute;
+        border-radius: 100%;
+        z-index: 1;
+        top: 0.5rem;
+    }
+
+    #CutBTN::after {
+        content: "";
+        width: 0;
+        background-color: white;
+        border: 1px solid white;
+        position: absolute;
+        top: 0.5rem;
+        left: 0.5rem;
+        height: 1rem;
+        transform: rotate(45deg) translate(5px, -5px);
+    }
+
+    #CutBTN::before {
+        content: "";
+        background-color: white;
+        width: 0;
+        border: 1px solid white;
+        position: absolute;
+        top: 0.5rem;
+        right: 0.5rem;
+        height: 1rem;
+        transform: rotate(-45deg) translate(-5px, -5px);
+    }
+
+    .CutUp {
+        animation: AniCutUp 0.3s 0s ease-in-out 1 both;
+    }
+
+    @keyframes AniCutUp {
+        from {
+            top: 0.5rem;
+        }
+
+        to {
+            top: -2rem;
+        }
+    }
+
+    .CutDown {
+        animation: AniCutDown reverse 0.3s 0s ease-in-out 1 both;
+    }
+
+    @keyframes AniCutDown {
+        from {
+            top: 0.5rem;
+        }
+
+        to {
+            top: -2rem;
+        }
+    }
+</style>
+
+<body>
+    <div id="sec">
+        <div id="window">
+            <div class="Null" id="p1">
+                <input type="text" id="SearchText">
+                <div id="SearchBTN"></div>
+                <div class="Null" id="CutBTN"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let p1 = document.getElementById("p1");
+        let SearchBTN = document.getElementById("SearchBTN");
+        let CutBTN = document.getElementById("CutBTN");
+        SearchBTN.addEventListener("click", () => {
+
+            if (p1.className != "WidthUpP1") {
+                p1.className = "WidthUpP1";
+                CutBTN.className = "CutUp";
+            } else {
+            }
+        })
+        CutBTN.addEventListener("click", () => {
+            if (p1.className != "WidthUpP1") {
+                p1.className = "WidthUpP1";
+                CutBTN.className = "CutUp";
+            } else {
+                p1.className = "WidthDownP1";
+                CutBTN.className = "CutDown";
+            }
+
+        })
+    </script>
+
+</body>
+
+</html>
