@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="Favicon.png" type="image/x-icon">
+    <title>Google</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        outline: none;
+        user-select: none;
+    }
+
+    body {
+        background-color: #111;
+    }
+
+    #sec {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+        position: relative;
+    }
+
+    #window {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width: 38rem;
+        height: 20rem;
+        background-color: #222;
+        border: 2px solid white;
+        border-radius: 1rem;
+        /* flex-wrap: wrap; */
+        flex-direction: column;
+    }
+
+    #p2 {
+        width: auto;
+        /* background-color: #fff; */
+        height: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    #TextSearch {
+        width: 30rem;
+        height: 2rem;
+        background-color: #111;
+        border: 2px solid rgb(11, 129, 207);
+        font: caption;
+        font-weight: 400;
+        font-size: 1.0rem;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 0.4rem;
+        border-radius: 2rem;
+        padding-right: 2rem;
+    }
+
+    #SearchBTN {
+        width: 2rem;
+        height: 1.9rem;
+        border-radius: 2rem;
+        font: caption;
+        font-size: 1.3rem;
+        color: rgb(255, 255, 255);
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        text-align: center;
+        font-weight: 700;
+        /* margin: 0 2rem; */
+        text-decoration: none;
+        color: #e2cd0e;
+        position: absolute;
+        right: 0rem;
+    }
+
+    #SearchBTN::after {
+        position: absolute;
+        width: 0.7rem;
+        height: 0.7rem;
+        border-radius: 100%;
+        border: 2px solid white;
+        content: "";
+        transform: translate(-5px, -3px);
+    }
+
+    #SearchBTN::before {
+        position: absolute;
+        width: 0;
+        height: 0.5rem;
+        border-radius: 100%;
+        border: 1px solid white;
+        content: "";
+        transform: rotate(-42deg) translate(-2px, 4px);
+    }
+
+    #p1 {
+        width: 100%;
+        height: 5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        flex-direction: row;
+    }
+
+    #GoogleSelBTN {
+        width: 10rem;
+        height: 2rem;
+        border-radius: 2rem;
+        font: caption;
+        font-size: 1.3rem;
+        color: rgb(0, 0, 0);
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        text-align: center;
+        font-weight: 700;
+        margin: 0 2rem;
+        border: 2px solid #0e88e2;
+        color: white;
+    }
+
+    #YTSelBTN {
+        width: 10rem;
+        height: 2rem;
+        border-radius: 2rem;
+        font: caption;
+        font-size: 1.3rem;
+        color: rgb(0, 0, 0);
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        text-align: center;
+        font-weight: 700;
+        margin: 0 2rem;
+        border: 2px solid #e20e0eea;
+        color: white;
+    }
+
+    #h1 {
+        color: transparent;
+        font: caption;
+        -webkit-text-stroke: 2px rgb(11, 129, 207);
+        font-weight: 700;
+        font-size: 6rem;
+        height: 9rem;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+
+<body>
+    <div id="sec">
+        <div id="window">
+            <h1 id="h1">
+                Search!
+            </h1>
+            <div id="p2">
+                <input type="text" id="TextSearch">
+                <a href="#" target="_blank" id="SearchBTN"></a>
+            </div>
+            <div id="p1">
+                <div id="GoogleSelBTN">Google</div>
+                <div id="YTSelBTN">YouTube</div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        let TextSearch = document.getElementById("TextSearch");
+        let GoogleSelBTN = document.getElementById("GoogleSelBTN");
+        let SearchBTN = document.getElementById("SearchBTN");
+        var Swt = 0;
+        GoogleSelBTN.style.backgroundColor = "#0e88e2"
+        GoogleSelBTN.addEventListener("click", () => {
+            Swt = 0;
+            GoogleSelBTN.style.backgroundColor = "#0e88e2"
+            if (YTSelBTN.style.backgroundColor = "#e20e0eea") {
+                GoogleSelBTN.style.backgroundColor = "#0e88e2"
+                YTSelBTN.style.backgroundColor = "transparent"
+            }
+        })
+
+        YTSelBTN.addEventListener("click", () => {
+            Swt = 1;
+            YTSelBTN.style.backgroundColor = "#e20e0eea"
+            if (GoogleSelBTN.style.backgroundColor = "#0e88e2") {
+                YTSelBTN.style.backgroundColor = "#e20e0eea"
+                GoogleSelBTN.style.backgroundColor = "transparent"
+            }
+        })
+
+        SearchBTN.addEventListener("click", () => {
+            if (Swt != 1) {
+                SearchBTN.setAttribute("href", "https://www.google.co.in/search?q=" + TextSearch.value);
+            } else {
+                SearchBTN.setAttribute("href", "https://www.youtube.com/results?search_query=" + TextSearch.value);
+            }
+
+        })
+
+    </script>
+</body>
+
+</html>
