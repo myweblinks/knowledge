@@ -1,0 +1,215 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    z-index: 12;
+}
+
+body {
+    background-color: black;
+}
+
+#BodyP {
+    opacity: 1;
+}
+
+#BodyP::after {
+    position: fixed;
+    content: "";
+    width: 100%;
+    height: 100vh;
+    background-image: url(/Files/back.jpg);
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3;
+}
+
+nav {
+    width: 100%;
+    height: 4rem;
+    top: 0;
+}
+
+#slideNav {
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+    opacity: 1;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.692);
+}
+
+#ProfileImg {
+    background: #111;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 100%;
+    margin-left: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-image: url(/Files/RoyalDesigner.png);
+    background-position: center;
+    background-size: cover;
+}
+
+#WebsiteName {
+    font: caption;
+    color: rgba(255, 255, 255, 0.664);
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-size: 1.7rem;
+    padding-left: 1rem;
+    font-family: monospace;
+}
+
+#QuickBTNP {
+    background: rgb(67 66 67);
+    width: 3rem;
+    height: 3rem;
+    border-radius: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 1rem;
+    right: 1rem;
+}
+
+.Dots {
+    background: white;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 100%;
+    margin: 0 0.17rem;
+    transform: 0.5s;
+}
+
+.DotsAniUp {
+    background: white;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 100%;
+    margin: 0 0.17rem;
+    animation: DotsUpAni 0.3s 0s ease-in-out 1 both;
+}
+
+@keyframes DotsUpAni {
+    from {
+        height: 00.5rem;
+    }
+    to {
+        width: 0.3rem;
+        transform: rotate(45deg) translate(-5px, 3px);
+        height: 2rem;
+        border-radius: 2rem;
+    }
+}
+
+.DotsAniUp1 {
+    background: white;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 100%;
+    margin: 0 0.17rem;
+    animation: DotsUpAni1 0.3s 0s ease-in-out 1 both;
+}
+
+@keyframes DotsUpAni1 {
+    from {
+        height: 00.5rem;
+    }
+    to {
+        width: 0.3rem;
+        transform: rotate(-45deg) translate(4px, 2px);
+        height: 2rem;
+        border-radius: 2rem;
+    }
+}
+
+.DotsAniUpRev {
+    background: white;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 100%;
+    margin: 0 0.17rem;
+    animation: DotsUpAniRev reverse 0.3s 0s ease-in-out 1 both;
+}
+
+@keyframes DotsUpAniRev {
+    from {
+        height: 00.5rem;
+    }
+    to {
+        width: 0.3rem;
+        transform: rotate(45deg) translate(-5px, 3px);
+        height: 2rem;
+        border-radius: 2rem;
+    }
+}
+
+.DotsAniUp1Rev {
+    background: white;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 100%;
+    margin: 0 0.17rem;
+    animation: DotsUpAni1Rev reverse 0.3s 0s ease-in-out 1 both;
+}
+
+@keyframes DotsUpAni1Rev {
+    from {
+        height: 00.5rem;
+    }
+    to {
+        width: 0.3rem;
+        transform: rotate(-45deg) translate(4px, 2px);
+        height: 2rem;
+        border-radius: 2rem;
+    }
+}
+
+#QuickLinkWin {
+    background-color: rgba(255, 255, 255, 0.808);
+    width: 10rem;
+    height: 10rem;
+    position: absolute;
+    right: 1.1rem;
+    bottom: 1.1rem;
+    display: none;
+    border-radius: 1rem;
+    z-index: 1;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    overflow: hidden;
+    border: 2px solid white;
+    user-select: none;
+    animation: AniQuickWin 0.5s 0s ease-in-out 1 both;
+}
+
+@keyframes AniQuickWin {
+    to {
+        opacity: 1;
+    }
+}
+
+.QuickLinksItems {
+    background-color: rgb(36, 36, 36);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font: caption;
+    font-size: 1.2rem;
+    color: white;
+    cursor: default;
+}
