@@ -5,6 +5,18 @@
     z-index: 12;
 } 
 
+::-webkit-scrollbar{
+    width: 0.5rem;
+    background-color: rgb(65, 65, 66);
+}
+::-webkit-scrollbar-button{
+    display: none;
+}
+::-webkit-scrollbar-thumb{
+    background-color: rgb(95, 95, 95);
+    border-radius: 0.5rem;
+}
+
 body {
     background-color: black;
 }
@@ -67,6 +79,7 @@ nav {
     padding-left: 1.2rem;
     font-family: monospace;
 }
+
 
 #QuickBTNP {
     background: rgb(67 66 67);
@@ -270,6 +283,7 @@ nav {
     justify-content: center;
     align-items: center;
     flex-wrap: nowrap;
+    margin: 4rem 0;
 }
 
 #MobileImages{
@@ -303,11 +317,63 @@ nav {
     flex-wrap: nowrap;
     margin: 4rem 0;
 }
+#Front3{
+    width: 100%;
+    height: 22rem;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: 4rem 0;
+}
+#WebImage1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 40rem;
+    height: auto;
+    margin-right: 0.5rem;
+}
+
+#AboutWeb1{
+    color: white;
+    width: 55%;
+    height: auto;
+    font: caption;
+    font-family: monospace;
+    font-size: 1.5rem;
+    margin: 0 1rem;
+    z-index: 1;
+}
 
 
 
 
-
+@media screen and (max-width: 1000px) {
+    #WebImage1{
+        width: 30rem;
+    }
+}
+@media screen and (max-width: 800px) {
+    #WebImage1{
+        width: 25rem;
+    }
+}
+@media screen and (max-width: 750px) {
+    #WebImage1{
+        width: 100%;
+    }
+    #Front3{
+        flex-direction: column;
+        height: auto;
+    }
+    #AboutWeb1{
+        width: 100%;
+        height: auto;
+        margin-top: 2rem;
+    }
+}
 
 @media screen and (max-width: 690px) {
     #MobileImages{
@@ -327,6 +393,11 @@ nav {
         /* background-color: red; */
     }
     #Front2{
+        /* background-color: red; */
+        height: 25rem;
+        margin: 0;
+    }
+    #Front3{
         /* background-color: red; */
         height: 25rem;
         margin: 0;
