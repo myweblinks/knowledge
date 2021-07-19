@@ -286,9 +286,12 @@ nav {
         font-size: 1rem;
     }
     #Front1{
-        height: 30rem;
+        height: 25rem;
+        /* background-color: red; */
     }
     #Front2{
-        height: 30rem;
+        /* background-color: red; */
+        height: 25rem;
+        margin: 0;
     }
 }
