@@ -3,16 +3,18 @@
     padding: 0;
     box-sizing: border-box;
     z-index: 12;
-} 
+}
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
     width: 0.5rem;
     background-color: rgb(65, 65, 66);
 }
-::-webkit-scrollbar-button{
+
+::-webkit-scrollbar-button {
     display: none;
 }
-::-webkit-scrollbar-thumb{
+
+::-webkit-scrollbar-thumb {
     background-color: rgb(95, 95, 95);
     border-radius: 0.5rem;
 }
@@ -80,9 +82,8 @@ nav {
     font-family: monospace;
 }
 
-
 #QuickBTNP {
-    background: rgb(67 66 67);
+    background: rgb(67, 66, 67);
     width: 3rem;
     height: 3rem;
     border-radius: 100%;
@@ -224,13 +225,14 @@ nav {
     font: caption;
     font-size: 1.2rem;
     color: white;
-    cursor: default;
+    cursor: pointer;
+    text-decoration: none;
 }
 
-#content{
+#content {
     display: flex;
     align-items: center;
-    width:90%;
+    width: 90%;
     height: auto;
     margin: 2rem auto;
     z-index: 9;
@@ -239,7 +241,7 @@ nav {
     flex-direction: column;
 }
 
-#WelcomePage{
+#WelcomePage {
     width: 100%;
     height: 35rem;
     display: flex;
@@ -249,12 +251,12 @@ nav {
     flex-direction: column;
 }
 
-#WelcomeProfile{
+#WelcomeProfile {
     width: 8rem;
     margin-top: 5rem;
 }
 
-#WelcomeName{
+#WelcomeName {
     font: caption;
     font-size: 3rem;
     color: white;
@@ -263,7 +265,7 @@ nav {
     font-family: monospace;
 }
 
-#BioTxt{
+#BioTxt {
     color: whitesmoke;
     font: caption;
     font-size: 1.05rem;
@@ -276,7 +278,7 @@ nav {
     font-weight: 300;
 }
 
-#Front1{
+#Front1 {
     width: 100%;
     height: 38rem;
     display: flex;
@@ -286,13 +288,13 @@ nav {
     margin: 4rem 0;
 }
 
-#MobileImages{
+#MobileImages {
     width: 20rem;
     height: auto;
     user-select: none;
 }
 
-#AboutMobileImg{
+#AboutMobileImg {
     color: white;
     width: 55%;
     height: auto;
@@ -303,12 +305,12 @@ nav {
     z-index: 1;
 }
 
-#fontLink{
+#fontLink {
     color: rgb(211, 81, 81);
     text-decoration: none;
 }
 
-#Front2{
+#Front2 {
     width: 100%;
     height: 35rem;
     display: flex;
@@ -317,16 +319,17 @@ nav {
     flex-wrap: nowrap;
     margin: 4rem 0;
 }
-#Front3{
+
+#Front3 {
     width: 100%;
     height: 22rem;
     display: flex;
-    /* justify-content: center; */
     align-items: center;
     flex-wrap: nowrap;
     margin: 4rem 0;
 }
-#WebImage1{
+
+#WebImage1 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -336,7 +339,7 @@ nav {
     margin-right: 0.5rem;
 }
 
-#AboutWeb1{
+#AboutWeb1 {
     color: white;
     width: 55%;
     height: auto;
@@ -347,28 +350,95 @@ nav {
     z-index: 1;
 }
 
+#Front4 {
+    width: 100%;
+    height: 5rem;
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+#YouTubeRedirector {
+    color: white;
+    font: caption;
+    font-size: 1.5rem;
+    /* font-weight: 400; */
+    font-family: monospace;
+}
 
+#GoYT {
+    text-decoration: none;
+    color: rgb(211, 81, 81);
+}
+
+footer {
+    /* background-color: red; */
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    z-index: 2;
+    flex-direction: column;
+    background-color: black;
+}
+
+#SocialPlate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    color: white;
+}
+
+.Socials {
+    color: white;
+    font: caption;
+    margin: auto 0.3rem;
+    font-weight: 500;
+    font-size: 1.2rem;
+    text-decoration: none;
+    user-select: none;
+}
+
+#CopyRight {
+    color: white;
+    width: 100%;
+    height: auto;
+    font: caption;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    user-select: none;
+}
 
 @media screen and (max-width: 1000px) {
-    #WebImage1{
+    #WebImage1 {
         width: 30rem;
     }
 }
+
 @media screen and (max-width: 800px) {
-    #WebImage1{
+    #WebImage1 {
         width: 25rem;
     }
 }
+
 @media screen and (max-width: 750px) {
-    #WebImage1{
+    #WebImage1 {
         width: 100%;
     }
-    #Front3{
+    #Front3 {
         flex-direction: column;
         height: auto;
     }
-    #AboutWeb1{
+    #AboutWeb1 {
         width: 100%;
         height: auto;
         margin-top: 2rem;
@@ -376,36 +446,50 @@ nav {
 }
 
 @media screen and (max-width: 690px) {
-    #MobileImages{
+    #MobileImages {
         width: 15rem;
     }
-    #AboutMobileImg{
+    #AboutMobileImg {
         font-size: 1.3rem;
     }
-    #MobileImages{
+    #YouTubeRedirector {
+        font-size: 1.3rem;
+    }
+    .Socials {
+        font-size: 1rem;
+    }
+    #CopyRight {
+        font-size: 0.8rem;
+    }
+    #MobileImages {
         width: 12rem;
     }
-    #AboutMobileImg{
+    #AboutMobileImg {
         font-size: 1rem;
     }
-    #AboutWeb1{
+    #AboutWeb1 {
         font-size: 1rem;
     }
-    #Front1{
+    #Front1 {
         height: 25rem;
-        /* background-color: red; */
     }
-    #Front2{
-        /* background-color: red; */
+    #Front2 {
         height: 25rem;
         margin: 0;
     }
-    #Front3{
-        /* background-color: red; */
+    #Front3 {
         height: 25rem;
-        margin: 0;
     }
-    #WelcomeName{
+    #WelcomeName {
         font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .Socials {
+        font-size: 0.9rem;
+    }
+    #Copyright {
+        font-size: 0.7rem;
     }
 }
