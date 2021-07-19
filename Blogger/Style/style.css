@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     z-index: 12;
-}
+} 
 
 body {
     background-color: black;
@@ -221,7 +221,7 @@ nav {
     width:90%;
     height: auto;
     margin: 2rem auto;
-    z-index: 14;
+    z-index: 11;
     opacity: 1;
     position: relative;
     flex-direction: column;
@@ -233,11 +233,11 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
 
 #MobileImages{
-    width: 27%;
+    width: 20rem;
     height: auto;
     user-select: none;
 }
@@ -260,4 +260,26 @@ nav {
 #Front2{
     height: 100vh;
     width: 100%;
+}
+
+
+
+
+
+
+@media screen and (max-width: 690px) {
+    #MobileImages{
+        width: 15rem;
+    }
+    #AboutMobileImg{
+        font-size: 1.3rem;
+    }
+}
+@media screen and (max-width: 690px) {
+    #MobileImages{
+        width: 12rem;
+    }
+    #AboutMobileImg{
+        font-size: 1rem;
+    }
 }
