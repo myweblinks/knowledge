@@ -50,7 +50,7 @@ nav {
     justify-content: center;
     align-items: center;
     position: relative;
-    background-image: url(../Files/RoyalDesigner.png);
+    background-image: url(../Files/goglesearch.png);
     background-position: center;
     background-size: cover;
 }
@@ -64,7 +64,7 @@ nav {
     align-items: center;
     position: relative;
     font-size: 1.7rem;
-    padding-left: 1rem;
+    padding-left: 1.2rem;
     font-family: monospace;
 }
 
@@ -178,7 +178,7 @@ nav {
     background-color: rgba(255, 255, 255, 0.808);
     width: 10rem;
     height: 10rem;
-    position: absolute;
+    position: fixed;
     right: 1.1rem;
     bottom: 1.1rem;
     display: none;
@@ -212,4 +212,52 @@ nav {
     font-size: 1.2rem;
     color: white;
     cursor: default;
+}
+
+#content{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    width:90%;
+    height: auto;
+    margin: 2rem auto;
+    z-index: 14;
+    opacity: 1;
+    position: relative;
+    flex-direction: column;
+}
+
+#Front1{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#MobileImages{
+    width: 27%;
+    height: auto;
+    user-select: none;
+}
+
+#AboutMobileImg{
+    color: white;
+    width: 55%;
+    height: auto;
+    font: caption;
+    font-family: monospace;
+    font-size: 1.5rem;
+    margin: 0 1rem;
+}
+
+#fontLink{
+    color: rgb(211, 81, 81);
+    text-decoration: none;
+}
+
+#Front2{
+    height: 100vh;
+    width: 100%;
 }
