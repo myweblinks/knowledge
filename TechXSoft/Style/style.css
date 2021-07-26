@@ -1,0 +1,506 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+}
+
+/* Global Classes */
+
+.Is-Shown {
+    display: flex;
+}
+
+.Is-Hidden {
+    display: none;
+}
+
+/* Continue CSS3 */
+
+nav {
+    width: auto;
+}
+
+#navigation {
+    width: auto;
+    height: auto;
+    background-color: rgb(21, 128, 228);
+    display: flex;
+    align-items: center;
+    border-bottom: 5px solid rgb(238, 114, 114);
+}
+
+#WebDetSec {
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#WebCon {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background: url(../Files/Best\ Channel\ Logo\ Of\ Technical\ TechX.png);
+    background-position: center;
+    background-size: cover;
+    margin: 0.4rem 0.5rem;
+}
+
+#WebName {
+    color: rgb(255, 255, 255);
+    font: caption;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: auto 0.5rem;
+    user-select: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+}
+
+#abouttil {
+    font-size: 0.5rem;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-weight: 500;
+}
+
+#NavServices {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: auto;
+    margin-left: 3rem;
+    height: auto;
+}
+
+.NavChooses {
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font: caption;
+    font-size: 0.8rem;
+    color: white;
+    padding: 0.7rem;
+    user-select: none;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.5s;
+    margin: 0 0.3rem;
+    text-transform: uppercase;
+}
+
+.NavChooses:hover {
+    background-color: rgb(54, 54, 138);
+}
+#MoreQCkLNK{
+    width: auto;
+    height: auto;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font: caption;
+    font-size: 0.8rem;
+    color: white;
+    padding: 0.7rem;
+    user-select: none;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.5s;
+    margin: 0 0.3rem;
+    text-transform: uppercase;
+}
+
+#MoreQCkLNK:hover {
+    background-color: rgb(54, 54, 138);
+}
+
+#OSIndicate {
+    width: auto;
+    height: auto;
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#SearchIn {
+    background-color: whitesmoke;
+    outline: none;
+    width: 17rem;
+    height: 2rem;
+    padding: 0.5rem;
+    font: caption;
+    font-size: 0.9rem;
+    color: black;
+    font-weight: 500;
+    border: none;
+    padding-left: 1rem;
+    border-bottom-left-radius: 2rem;
+    border-top-left-radius: 2rem;
+}
+
+#SearchComfm {
+    background-color: whitesmoke;
+    width: 2rem;
+    height: 2rem;
+    border-bottom-right-radius: 2rem;
+    border-top-right-radius: 2rem;
+    transition: 00.5s;
+    cursor: pointer;
+    position: relative;
+}
+
+#SearchComfm::after {
+    content: "";
+    position: absolute;
+    background-color: #111;
+    width: 3px;
+    height: 10px;
+    transform: rotate(-44deg) translate(4px, 27px);
+}
+
+#SearchComfm::before {
+    content: "";
+    position: absolute;
+    border: 3px solid #111;
+    border-radius: 20px;
+    width: 14px;
+    height: 14px;
+    z-index: 13;
+    transform: translate(3px, 3px);
+}
+
+#SearchComfm:hover {
+    background-color: rgb(194, 193, 193);
+}
+
+#OSIndc {
+    width: 2.1rem;
+    height: 2.1rem;
+    margin: 0 1rem;
+    border-radius: 2.1rem;
+    background-image: url(../Files/windows-icon-png-8.jpg);
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+#OSIndc:hover {
+    background-size: 110%;
+}
+
+/* Customize Content Section */
+
+#Content {
+    background: rgb(255, 255, 255);
+    height: auto;
+    min-width: 5rem;
+    max-width: 80rem;
+    margin: 0rem auto;
+    display: flex;
+    flex-direction: column;
+}
+
+#WelScrn {
+    width: 100%;
+    height: 15rem;
+    background-color: rgb(0, 101, 216);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex-direction: row;
+}
+
+#WelSlog {
+    width: 40rem;
+    height: auto;
+    text-align: center;
+    font: caption;
+    font-family: monospace;
+    font-weight: 800;
+    font-size: 2rem;
+    color: white;
+    position: relative;
+    text-transform: uppercase;
+}
+
+#SecureIMG {
+    background: url(../Files/secure.png);
+    background-position: center;
+    background-size: cover;
+    width: 10rem;
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#SafeIMG {
+    background: url(../Files/safe.png);
+    background-position: center;
+    background-size: cover;
+    width: 10rem;
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#SoftwareCTGRY {
+    background-color: rgb(230, 59, 59);
+    width: 100%;
+    height: auto;
+    padding: 0.5rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font: caption;
+    font-family: monospace;
+    text-transform: uppercase;
+    color: white;
+    font-size: 1.6rem;
+    font-weight: 800;
+    user-select: none;
+}
+
+#SoftwareCTGRYWS {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.SoftCate {
+    background-color: rgba(255, 0, 0, 0.411);
+    width: auto;
+    height: 3rem;
+    margin: 1rem 0.5rem;
+    border-radius: 10px;
+    transition: 0.5s;
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    padding: 0rem 0.5rem;
+    user-select: none;
+}
+
+.SoftCate:hover {
+    background-color: rgba(255, 0, 0, 0.603);
+}
+
+.SVGCON {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 0.5rem;
+}
+
+.SoftCateNames {
+    color: black;
+    font: caption;
+    font-family: monospace;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+}
+
+/* articles Section  */
+
+#ArtlSec {
+    width: 100%;
+    height: auto;
+    display: flex;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex-direction: column;
+}
+
+#HeadArticles {
+    background-color: rgb(230, 59, 59);
+    width: 100%;
+    height: auto;
+    padding: 0.5rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font: caption;
+    font-family: monospace;
+    text-transform: uppercase;
+    color: white;
+    font-size: 1.6rem;
+    font-weight: 800;
+    user-select: none;
+}
+
+.BlogsCONp {
+    width: 100%;
+    height: auto;
+    margin: 1rem 0;
+    display: flex;
+    position: relative;
+    padding: 0 1rem;
+    flex-direction: column;
+}
+
+.BlogsTitles {
+    width: 40rem;
+    height: auto;
+    font: caption;
+    font-size: 1.2rem;
+    font-family: monospace;
+    font-weight: 700;
+    padding: 0.5rem;
+    padding-bottom: 0;
+    color: rgb(0, 126, 199);
+    text-decoration: none;
+    display: flex;
+}
+
+.BlogsDesc {
+    width: 40rem;
+    height: auto;
+    display: flex;
+    position: relative;
+    font: caption;
+    font-size: 0.9rem;
+    font-weight: 400;
+    padding: 0.5rem;
+    padding-top: 0;
+}
+
+@media screen and (max-width: 1015px) {
+    #SearchIn{
+        display: none;
+        position: absolute;
+    }
+    #SearchComfm{
+        border-radius: 100%;
+    }
+    #SecureIMG{
+        width: 7rem;
+        height:7rem;
+    }
+    #SafeIMG{
+        width: 7rem;
+        height: 7rem;
+    }
+    #WelScrn{
+        height: 10rem;
+    }
+    #WelSlog{
+        font-size: 1.5rem;
+    }
+    #SoftwareCTGRY{
+        font-size: 1.3rem;
+        height: auto;
+    }
+    #HeadArticles{
+        font-size: 1.3rem;
+    }
+}
+@media screen and (max-width: 780px) {
+    #NavServices{
+        margin: 0;
+    }
+}
+@media screen and (max-width: 880px) {
+    #WelSlog{
+        font-size: 1.2rem;
+        width: 25rem;
+        margin: 0 1rem;
+    }
+}
+@media screen and (max-width: 690px) {
+    #MoreQCkLNK{
+        display: flex;
+    }
+    #NavChooseIt4{
+        display: none;
+    }
+    .BlogsTitles{
+        width: 100%;
+
+    }
+    .BlogsDesc{
+        width: 100%;
+    }
+    #SecureIMG{
+        width: 6rem;
+        height: 6rem;
+    }
+    #SafeIMG{
+        width: 6rem;
+        height: 6rem;
+    }
+    #WelSlog{
+        width: 22rem;
+    }
+}
+@media screen and (max-width: 620px) {
+    #NavChooseIt3{
+        display: none;
+    }
+    #WelSlog{
+        width: 18rem;
+        font-size: 1.1rem;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #NavChooseIt2{
+        display: none;
+    }
+    #SecureIMG{
+        width: 5rem;
+        height: 5rem;
+    }
+    #SafeIMG{
+        width: 5rem;
+        height: 5rem;
+    }
+    #WelSlog{
+        width: 14rem;
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    #NavChooseIt1{
+        display: none;
+    }
+}
