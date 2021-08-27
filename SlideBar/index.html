@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        position: relative;
+        box-sizing: border-box;
+    }
+
+    body {
+        background-color: #111;
+    }
+
+    nav {
+        background: linear-gradient(45deg, rgba(255, 0, 0, 0.507), rgba(0, 0, 255, 0.507));
+        display: flex;
+        align-items: center;
+        width: 100%;
+        padding: 0.7rem 1rem;
+        height: auto;
+    }
+
+    #TogBTN {
+        background: rgb(150, 27, 27);
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        height: 2.3rem;
+        width: 2.3rem;
+        border-radius: 7px;
+        border: 2px solid black;
+        cursor: pointer;
+        margin-left: auto;
+    }
+
+    #TogBTN>span:nth-child(1) {
+        background: rgb(0, 0, 0);
+        width: 80%;
+        height: 4px;
+        margin: 2.6px 0;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 22%;
+    }
+
+    #TogBTN>span:nth-child(2) {
+        background: rgb(0, 0, 0);
+        width: 80%;
+        height: 4px;
+        margin: 2.6px 0;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        bottom: 22%;
+    }
+
+    .RotActRight {
+        animation: RotActRight 0.5s 0s linear both;
+    }
+
+    @keyframes RotActRight {
+        from {
+            transform: rotate(0deg) translate(0);
+            top: auto;
+        }
+
+        to {
+            transform: rotate(45deg) translate(0);
+            top: auto;
+        }
+    }
+
+    .NorRotActRight {
+        animation: NorRotActRight 0.5s 0s reverse linear both;
+    }
+
+    @keyframes NorRotActRight {
+        from {
+            transform: rotate(0deg) translate(0);
+            top: 22%;
+        }
+
+        to {
+            transform: rotate(45deg) translate(0);
+            top: auto;
+        }
+    }
+
+    .RotActLeft {
+        animation: RotActLeft 0.5s 0s linear both;
+    }
+
+    @keyframes RotActLeft {
+        from {
+            transform: rotate(0deg) translate(0);
+            top: auto;
+        }
+
+        to {
+            transform: rotate(-45deg) translate(2px, -2px);
+            top: auto;
+        }
+    }
+
+    .NorRotActLeft {
+        animation: NorRotActLeft 0.5s 0s reverse linear both;
+    }
+
+    @keyframes NorRotActLeft {
+        from {
+            transform: rotate(0deg) translate(0);
+            bottom: 22%;
+        }
+
+        to {
+            transform: rotate(-45deg) translate(2px, -2px);
+            bottom: auto;
+        }
+    }
+
+    #SecSide {
+        background-color: rgb(56, 8, 8);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 20%;
+        height: 100vh;
+        position: absolute;
+        top: 0rem;
+        left: -20%;
+    }
+
+    .SlideAniTLft {
+        animation: SlideAniTLft 0.5s 0s ease-in-out both;
+    }
+
+    @keyframes SlideAniTLft {
+        from {
+            left: -20%;
+        }
+
+        to {
+            left: 0;
+        }
+    }
+
+    .SlideAniTLftCls {
+        animation: SlideAniTLftCls 0.5s 0s reverse ease-in-out both;
+    }
+
+    @keyframes SlideAniTLftCls {
+        from {
+            left: -20%;
+        }
+
+        to {
+            left: 0;
+        }
+    }
+</style>
+
+<body>
+    <nav>
+        <span id="TogBTN">
+            <span id="Span1" class="Null"></span>
+            <span id="Span2" class="Null"></span>
+        </span>
+    </nav>
+    <div id="SecSide"></div>
+</body>
+<script>
+    let span1 = document.getElementById("Span1");
+    let span2 = document.getElementById("Span2");
+    let SecSide = document.getElementById("SecSide");
+    let TogBTN = document.getElementById("TogBTN");
+
+    TogBTN.addEventListener("click", () => {
+        if (span1.className != "RotActRight") {
+            span1.className = "RotActRight";
+            span2.className = "RotActLeft";
+            SecSide.className = "SlideAniTLft"
+
+        } else {
+            span1.className = "NorRotActRight";
+            span2.className = "NorRotActLeft";
+            SecSide.className = "SlideAniTLftCls"
+
+        }
+
+    })
+
+
+</script>
+
+</html>
