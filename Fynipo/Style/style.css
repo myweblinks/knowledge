@@ -1,0 +1,400 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 12;
+}
+
+::-webkit-scrollbar {
+    background-color: rgba(255, 0, 0, 0);
+    width: 0.6rem;
+}
+
+::-webkit-scrollbar-button {
+    display: none;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(105, 105, 105);
+    border-radius: 10px;
+}
+
+body {
+    background-color: #111;
+}
+
+/* Navigation Bar Of Website  */
+
+nav {
+    background-color: rgba(0, 100, 158, 0.63);
+    width: 100%;
+    height: 3.35rem;
+    display: flex;
+    align-items: center;
+    padding: 0.3rem 0.3rem;
+    justify-content: center;
+}
+
+/* Website Head Name */
+
+#WebName {
+    color: rgb(216, 216, 216);
+    font: caption;
+    font-weight: 600;
+    font-size: 2.3rem;
+    cursor: default;
+    text-transform: uppercase;
+    font-family: monospace;
+    user-select: none;
+}
+
+/* Side Bar Section  */
+
+#SideBar {
+    background-color: #222;
+    display: flex;
+    width: 18rem;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -14.5rem;
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+/* To Control Side Bar visiblity BTN  */
+
+#ToSlideOpn {
+    background-color: rgb(44, 44, 44);
+    border-radius: 5px;
+    width: 2.6rem;
+    height: 2.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    margin: 0.5rem;
+    border: 1.7px solid rgb(228, 228, 228);
+}
+
+.LInBTNs {
+    background-color: rgb(228, 228, 228);
+    width: 70%;
+    height: 4px;
+    margin: 4px 0;
+}
+
+.UpLNAni {
+    animation: UpLNAni 0.5s 0s linear both;
+    background-color: rgb(228, 228, 228);
+    width: 70%;
+    height: 4px;
+    margin: 4px 0;
+}
+
+@keyframes UpLNAni {
+    from {
+        transform: rotate(0deg) translate(0px, 0px);
+    }
+    to {
+        transform: rotate(45deg) translate(4px, 3px);
+    }
+}
+
+.DoLNAni {
+    animation: DoLNAni 0.5s 0s linear both;
+    background-color: rgb(228, 228, 228);
+    width: 70%;
+    height: 4px;
+    margin: 4px 0;
+}
+
+@keyframes DoLNAni {
+    from {
+        transform: rotate(0deg) translate(0px, 0px);
+    }
+    to {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+}
+
+.UpLNAniRev {
+    animation: UpLNAniRev reverse 0.5s 0s linear both;
+    background-color: rgb(228, 228, 228);
+    width: 70%;
+    height: 4px;
+    margin: 4px 0;
+}
+
+@keyframes UpLNAniRev {
+    from {
+        transform: rotate(0deg) translate(0px, 0px);
+    }
+    to {
+        transform: rotate(45deg) translate(4px, 3px);
+    }
+}
+
+.DoLNAniRev {
+    animation: DoLNAniRev reverse 0.5s 0s linear both;
+    background-color: rgb(228, 228, 228);
+    width: 70%;
+    height: 4px;
+    margin: 4px 0;
+}
+
+@keyframes DoLNAniRev {
+    from {
+        transform: rotate(0deg) translate(0px, 0px);
+    }
+    to {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+}
+
+/* Inner Items Of Side Bar Container  */
+
+#SideItmsCon {
+    background-color: rgb(29, 29, 29);
+    width: 80%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#WebNameInSide {
+    color: rgb(216, 216, 216);
+    font: caption;
+    font-weight: 600;
+    font-size: 1.7rem;
+    cursor: default;
+    height: 3.35rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-family: monospace;
+    user-select: none;
+    width: 100%;
+    background-color: #111;
+}
+
+#ScrollItems {
+    overflow-y: scroll;
+    margin-top: 1rem;
+    flex-direction: column;
+    width: 100%;
+}
+
+.InSideItems {
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    color: whitesmoke;
+    font: caption;
+    font-size: 1.1rem;
+    font-weight: 300;
+    font-variant: small-caps;
+    text-transform: capitalize;
+    position: relative;
+}
+
+.InSideItems:hover {
+    background-color: #222;
+}
+
+/* Outsider Items Container  */
+
+#RightSideBTNAnItems {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Outer Side Items Container  */
+
+#SideBot {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 1rem;
+}
+
+/* Class Of Outer Icons in side bar  */
+
+.FiveHomeIcons {
+    width: 100%;
+    height: 3.6rem;
+    margin: 0.2rem 0;
+    transition: 0.3s;
+}
+
+/* When user hover icons then change something here  */
+
+.FiveHomeIcons:hover {
+    background-color: #111;
+}
+
+/* Home Icon Selected presenting  */
+
+#FiveHomeIcon1 {
+    background-color: #111;
+    fill: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* SVG Code CSS  */
+
+.HomeSVG {
+    width: 2.5rem;
+    margin: auto;
+}
+
+#InstgramServ {
+    height: 3rem;
+    overflow: hidden;
+}
+
+#FiveHomeIcon2 {
+    background-image: url(../Files/Youtubeb&w.png);
+    background-position: center;
+    background-size: 70%;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: invert();
+}
+
+#FiveHomeIcon2:hover {
+    background-color: rgb(238, 238, 238);
+}
+
+#FiveHomeIcon3 {
+    background-image: url(../Files/Followers.png);
+    background-position: center;
+    background-size: 55%;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: invert();
+}
+
+#FiveHomeIcon3:hover {
+    background-color: rgb(238, 238, 238);
+}
+
+#FiveHomeIcon4 {
+    background-image: url(../Files/Likes.png);
+    background-position: center;
+    background-size: 75%;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: invert();
+}
+
+#FiveHomeIcon4:hover {
+    background-color: rgb(238, 238, 238);
+}
+
+#FiveHomeIcon5 {
+    background-image: url(../Files/privacyPolicy.png);
+    background-position: center;
+    background-size: 75%;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: invert();
+}
+
+#DownloadsShower {
+    height: 3rem;
+    overflow: hidden;
+}
+
+/* Hover Effect  */
+
+#FiveHomeIcon5:hover {
+    background-color: rgb(238, 238, 238);
+}
+
+#Help {
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-bottom: 0.3rem;
+    background-image: url(../Files/Hep.png);
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    filter: invert();
+}
+
+#Help:hover {
+    background-color: rgb(255, 255, 255);
+}
+
+/* Union Classes */
+
+.MarginLeft1rem {
+    margin-left: 2.5rem;
+}
+
+.FontForInChild {
+    font-weight: 300;
+    font-size: 1.07rem;
+}
+
+.cursorPinted {
+    cursor: pointer;
+}
+
+.InsideIcons {
+    width: 2.7rem;
+    height: 2.7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0.5rem;
+}
+
+.invert {
+    filter: invert();
+}
+
+.userselectnone {
+    user-select: none;
+}
+
+.innericons {
+    width: 1.7rem;
+    height: auto;
+    margin: 0 0.5rem;
+}
+
+/* media querry for android device for cursor change */
+
+@media screen and (max-width: 550px) {
+    * {
+        cursor: default;
+    }
+    .cursorPinted {
+        cursor: default;
+    }
+}
