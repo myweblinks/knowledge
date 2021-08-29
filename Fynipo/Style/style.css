@@ -27,13 +27,14 @@ body {
 /* Navigation Bar Of Website  */
 
 nav {
-    background-color: rgba(0, 100, 158, 0.63);
+    background-color: #222;
     width: 100%;
     height: 3.35rem;
     display: flex;
     align-items: center;
     padding: 0.3rem 0.3rem;
-    justify-content: center;
+    padding-left: 5rem;
+    z-index: 12;
 }
 
 /* Website Head Name */
@@ -44,9 +45,206 @@ nav {
     font-weight: 600;
     font-size: 2.3rem;
     cursor: default;
-    text-transform: uppercase;
+    text-transform: capitalize;
     font-family: monospace;
     user-select: none;
+    margin-right: auto;
+}
+
+/* Search Section  */
+
+#searchSec {
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 11;
+    transform: translate(0rem);
+}
+
+#SearchDIn {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25rem;
+    height: 1.7rem;
+    color: black;
+    padding: 0rem 0.5rem;
+    outline: none;
+    border: none;
+    font-size: 13px;
+    border-radius: 5px;
+}
+
+#SearchDIn::placeholder {
+    user-select: none;
+    color: black;
+}
+
+#SearchSubBTN2 {
+    background-color: white;
+    width: 2rem;
+    height: 1.7rem;
+    outline: none;
+    border: none;
+    margin: 0rem 0.4rem;
+    border-radius: 5px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+#SearchSubBTN2::before {
+    position: absolute;
+    content: "";
+    width: 12px;
+    height: 12px;
+    border: 2px solid #999;
+    border-radius: 100%;
+    transform: translate(-2.5px, -3px);
+    z-index: 14;
+}
+
+#SearchSubBTN2::after {
+    position: absolute;
+    content: "";
+    width: 2px;
+    height: 10px;
+    background-color: #999;
+    transform: rotate(-45deg) translate(0.7px, 6.3px);
+}
+
+#SearchSubBTN {
+    background-color: white;
+    width: 2rem;
+    height: 1.7rem;
+    outline: none;
+    border: none;
+    margin: 0rem 0.4rem;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#SearchSubBTN:hover {
+    background-color: rgb(240, 240, 240);
+}
+
+#SearchSubBTN::before {
+    position: absolute;
+    content: "";
+    width: 12px;
+    height: 12px;
+    border: 2px solid #999;
+    border-radius: 100%;
+    transform: translate(-2.5px, -3px);
+    z-index: 14;
+}
+
+#SearchSubBTN::after {
+    position: absolute;
+    content: "";
+    width: 2px;
+    height: 10px;
+    background-color: #999;
+    transform: rotate(-45deg) translate(0.7px, 6.3px);
+}
+
+#SearchSggt {
+    background-color: white;
+    display: none;
+    align-items: center;
+    width: 25rem;
+    position: absolute;
+    top: 120%;
+    height: auto;
+    left: 0;
+    border-radius: 10px;
+    flex-direction: column;
+}
+
+#Catee {
+    width: 100%;
+    height: 2rem;
+    color: black;
+    background-color: #999;
+    padding-left: 0.6rem;
+    display: flex;
+    font: caption;
+    font-family: monospace;
+    font-weight: 700;
+    align-items: center;
+}
+
+#SearchSggt>ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+#SearchSggt>ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    width: auto;
+    height: auto;
+    font: caption;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin: 0 1rem;
+    padding: 0.4rem 0.5rem;
+    cursor: pointer;
+}
+
+#SearchSggt>ul li:hover {
+    background-color: rgba(34, 34, 34, 0.171);
+}
+
+/* Login Section  */
+#LogSec {
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+}
+
+#Login {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font: caption;
+    font-weight: 600;
+}
+
+#SignUp {
+    background-color: white;
+    width: 5rem;
+    height: 2rem;
+    border-radius: 5px;
+    font: caption;
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+    display: flex;
+    font-size: 1.1rem;
+    justify-content: center;
+    align-items: center;
+    margin: 0rem 1rem;
+}
+
+#SignUp:hover {
+    background-color: rgb(221, 221, 221);
 }
 
 /* Side Bar Section  */
@@ -232,6 +430,8 @@ nav {
     width: 100%;
     height: 3.6rem;
     margin: 0.2rem 0;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
     transition: 0.3s;
 }
 
@@ -338,7 +538,7 @@ nav {
     border-radius: 100%;
     width: 2.5rem;
     height: 2.5rem;
-    margin-bottom: 0.3rem;
+    margin-bottom: 1rem;
     background-image: url(../Files/Hep.png);
     background-position: center;
     background-size: 100%;
@@ -348,6 +548,17 @@ nav {
 
 #Help:hover {
     background-color: rgb(255, 255, 255);
+}
+
+#WriteHereContent {
+    background-color: #111;
+    width: 100%;
+    height: 200vh;
+    z-index: 11;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 3rem;
 }
 
 /* Union Classes */
@@ -396,5 +607,48 @@ nav {
     }
     .cursorPinted {
         cursor: default;
+    }
+}
+
+@media screen and (max-width: 838px) {
+    #SearchDIn {
+        width: 15rem;
+    }
+    #SignUp{
+        margin-right: 0.5rem;
+    }
+}
+
+@media screen and (max-width: 670px) {
+    #SearchDIn {
+        display: flex;
+        margin-top: 6rem;
+        position: absolute;
+        left: -250%;
+    }
+    #SearchSubBTN {
+        top: 0;
+        display: flex;
+        margin-top: 3rem;
+        position: absolute;
+        right: -300%;
+    }
+    #SearchSubBTN2 {
+        display: flex;
+        height: 1.7rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    nav {
+        height: 3rem;
+    }
+    #WebName {
+        font-size: 1.4rem;
+    }
+    #SignUp {
+        width: 4rem;
+        height: 1.7rem;
+        font-size: 0.9rem;
     }
 }
