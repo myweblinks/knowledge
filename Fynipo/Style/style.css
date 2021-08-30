@@ -4,6 +4,7 @@
     box-sizing: border-box;
     position: relative;
     z-index: 12;
+    scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar {
@@ -34,6 +35,7 @@ nav {
     align-items: center;
     padding: 0.3rem 0.3rem;
     padding-left: 5rem;
+    flex-wrap: wrap;
     z-index: 12;
 }
 
@@ -51,170 +53,15 @@ nav {
     margin-right: auto;
 }
 
-/* Search Section  */
-
-#searchSec {
-    width: auto;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: auto;
-    margin-right: auto;
-    z-index: 11;
-    transform: translate(0rem);
-}
-
-#SearchDIn {
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 25rem;
-    height: 1.7rem;
-    color: black;
-    padding: 0rem 0.5rem;
-    outline: none;
-    border: none;
-    font-size: 13px;
-    border-radius: 5px;
-}
-
-#SearchDIn::placeholder {
-    user-select: none;
-    color: black;
-}
-
-#SearchSubBTN2 {
-    background-color: white;
-    width: 2rem;
-    height: 1.7rem;
-    outline: none;
-    border: none;
-    margin: 0rem 0.4rem;
-    border-radius: 5px;
-    display: none;
-    justify-content: center;
-    align-items: center;
-}
-
-#SearchSubBTN2::before {
-    position: absolute;
-    content: "";
-    width: 12px;
-    height: 12px;
-    border: 2px solid #999;
-    border-radius: 100%;
-    transform: translate(-2.5px, -3px);
-    z-index: 14;
-}
-
-#SearchSubBTN2::after {
-    position: absolute;
-    content: "";
-    width: 2px;
-    height: 10px;
-    background-color: #999;
-    transform: rotate(-45deg) translate(0.7px, 6.3px);
-}
-
-#SearchSubBTN {
-    background-color: white;
-    width: 2rem;
-    height: 1.7rem;
-    outline: none;
-    border: none;
-    margin: 0rem 0.4rem;
-    border-radius: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#SearchSubBTN:hover {
-    background-color: rgb(240, 240, 240);
-}
-
-#SearchSubBTN::before {
-    position: absolute;
-    content: "";
-    width: 12px;
-    height: 12px;
-    border: 2px solid #999;
-    border-radius: 100%;
-    transform: translate(-2.5px, -3px);
-    z-index: 14;
-}
-
-#SearchSubBTN::after {
-    position: absolute;
-    content: "";
-    width: 2px;
-    height: 10px;
-    background-color: #999;
-    transform: rotate(-45deg) translate(0.7px, 6.3px);
-}
-
-#SearchSggt {
-    background-color: white;
-    display: none;
-    align-items: center;
-    width: 25rem;
-    position: absolute;
-    top: 120%;
-    height: auto;
-    left: 0;
-    border-radius: 10px;
-    flex-direction: column;
-}
-
-#Catee {
-    width: 100%;
-    height: 2rem;
-    color: black;
-    background-color: #999;
-    padding-left: 0.6rem;
-    display: flex;
-    font: caption;
-    font-family: monospace;
-    font-weight: 700;
-    align-items: center;
-}
-
-#SearchSggt>ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-}
-
-#SearchSggt>ul li {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    list-style: none;
-    width: auto;
-    height: auto;
-    font: caption;
-    font-size: 0.9rem;
-    font-weight: 500;
-    margin: 0 1rem;
-    padding: 0.4rem 0.5rem;
-    cursor: pointer;
-}
-
-#SearchSggt>ul li:hover {
-    background-color: rgba(34, 34, 34, 0.171);
-}
-
 /* Login Section  */
+
 #LogSec {
     width: auto;
     height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: auto;
+    margin-left: 2rem;
 }
 
 #Login {
@@ -444,11 +291,16 @@ nav {
 /* Home Icon Selected presenting  */
 
 #FiveHomeIcon1 {
-    background-color: #111;
+    background-color: rgb(238, 238, 238);
     fill: white;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url();
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: invert();
 }
 
 /* SVG Code CSS  */
@@ -464,7 +316,6 @@ nav {
 }
 
 #FiveHomeIcon2 {
-    background-image: url(../Files/Youtubeb&w.png);
     background-position: center;
     background-size: 70%;
     background-repeat: no-repeat;
@@ -472,6 +323,30 @@ nav {
     justify-content: center;
     align-items: center;
     filter: invert();
+}
+
+#FiveHomeIcon2::before {
+    position: absolute;
+    content: "";
+    width: 15px;
+    height: 15px;
+    border: 2px solid rgb(97, 97, 97);
+    border-radius: 100%;
+    transform: translate(-2.5px, -3px);
+    z-index: 14;
+}
+
+#FiveHomeIcon2::after {
+    position: absolute;
+    content: "";
+    width: 2px;
+    height: 12px;
+    background-color: rgb(97, 97, 97);
+    transform: rotate(-45deg) translate(0.7px, 9.5px);
+}
+
+#FiveHomeIcon1:hover {
+    background-color: rgb(238, 238, 238);
 }
 
 #FiveHomeIcon2:hover {
@@ -553,12 +428,12 @@ nav {
 #WriteHereContent {
     background-color: #111;
     width: 100%;
-    height: 200vh;
+    height: 600vh;
     z-index: 11;
     display: flex;
-    justify-content: center;
     align-items: center;
-    padding-left: 3rem;
+    flex-direction: column;
+    padding-left: 3.45rem;
 }
 
 /* Union Classes */
@@ -601,6 +476,13 @@ nav {
 
 /* media querry for android device for cursor change */
 
+@media screen and (max-width: 1025px) {
+    #searchSec {
+        position: relative;
+        top: 0%;
+    }
+}
+
 @media screen and (max-width: 550px) {
     * {
         cursor: default;
@@ -611,40 +493,18 @@ nav {
 }
 
 @media screen and (max-width: 838px) {
-    #SearchDIn {
-        width: 15rem;
-    }
-    #SignUp{
+    #SignUp {
         margin-right: 0.5rem;
     }
 }
 
-@media screen and (max-width: 670px) {
-    #SearchDIn {
-        display: flex;
-        margin-top: 6rem;
-        position: absolute;
-        left: -250%;
-    }
-    #SearchSubBTN {
-        top: 0;
-        display: flex;
-        margin-top: 3rem;
-        position: absolute;
-        right: -300%;
-    }
-    #SearchSubBTN2 {
-        display: flex;
-        height: 1.7rem;
-    }
-}
+@media screen and (max-width: 720px) {}
+
+@media screen and (max-width: 670px) {}
 
 @media screen and (max-width: 600px) {
-    nav {
-        height: 3rem;
-    }
     #WebName {
-        font-size: 1.4rem;
+        font-size: 1.8rem;
     }
     #SignUp {
         width: 4rem;
