@@ -296,6 +296,7 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
+    /* background-image: url(../Files/home_icon.png); */
     background-size: 80%;
     background-repeat: no-repeat;
     background-position: center;
@@ -487,6 +488,9 @@ nav {
         cursor: default;
     }
     .cursorPinted {
+        cursor: default;
+    }
+    #ToSlideOpn{
         cursor: default;
     }
 }
