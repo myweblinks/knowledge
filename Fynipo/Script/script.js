@@ -1,25 +1,8 @@
 //All Varibales Section 
-let LInBTN1 = document.getElementById("LInBTN1");
-let LInBTN2 = document.getElementById("LInBTN2");
-let ToSlideOpn = document.getElementById("ToSlideOpn");
-let SideBar = document.getElementById("SideBar");
-let FiveHomeIcon1 = document.getElementById("FiveHomeIcon1");
-let FiveHomeIcon2 = document.getElementById("FiveHomeIcon2");
-let FiveHomeIcon3 = document.getElementById("FiveHomeIcon3");
-let FiveHomeIcon4 = document.getElementById("FiveHomeIcon4");
-let FiveHomeIcon5 = document.getElementById("FiveHomeIcon5");
-let DownloadsShoItems = document.getElementById("DownloadsShoItems");
-let DownloadsShower = document.getElementById("DownloadsShower");
-let InstagramServices = document.getElementById("InstagramServices");
-let InstgramServ = document.getElementById("InstgramServ");
-let SearchDIn = document.getElementById("SearchDIn");
-let SearchSggt = document.getElementById("SearchSggt");
-let Help = document.getElementById("Help");
-let GiveMouseDetl = document.getElementById("GiveMouseDetl");
-let body = document.body;
+
 
 //Array for hide Elements
-let HideFiveHome = [FiveHomeIcon1, FiveHomeIcon2, FiveHomeIcon3, FiveHomeIcon4, FiveHomeIcon5];
+let HideFiveHome = [FiveHomeIcon1, FiveHomeIcon2];
 
 //Click Event in ToSlideOpn
 ToSlideOpn.addEventListener("click", () => {
@@ -27,14 +10,14 @@ ToSlideOpn.addEventListener("click", () => {
         LInBTN1.className = "UpLNAni";
         LInBTN2.className = "DoLNAni";
         SideBar.style.left = "0";
-        body.style.overflow="hidden"
+        body.style.overflow = "hidden"
         for (let i = 0; i < HideFiveHome.length; i++) {
             HideFiveHome[i].style.display = "none";
-            
+
         }
-        
+
     } else {
-        body.style.overflowY="scroll"
+        body.style.overflowY = "scroll"
         LInBTN1.className = "UpLNAniRev";
         SideBar.style.left = "-14.5rem";
         LInBTN2.className = "DoLNAniRev";
@@ -64,10 +47,23 @@ InstagramServices.addEventListener("click", () => {
     }
 })
 
-SearchDIn.addEventListener("focusin",()=>{
-    SearchSggt.style.display="flex"
-    
+SearchDIn.addEventListener("focusin", () => {
+    SearchSggt.style.display = "flex"
+
 })
-SearchDIn.addEventListener("focusout",()=>{
-    SearchSggt.style.display="none"
+SearchDIn.addEventListener("focusout", () => {
+    SearchSggt.style.display = "none"
+})
+
+//To Show Search Bar Event Section 
+SearchSubBTN2.addEventListener("click", () => {
+
+    if (SearchSubBTN.style.display != "flex") {
+        SearchSubBTN.style.display = "flex"
+        SearchDIn.style.display = "flex"
+    } else {
+
+        SearchSubBTN.style.display = "none"
+        SearchDIn.style.display = "none"
+    }
 })
