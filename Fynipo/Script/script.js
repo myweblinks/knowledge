@@ -47,23 +47,3 @@ InstagramServices.addEventListener("click", () => {
     }
 })
 
-SearchDIn.addEventListener("focusin", () => {
-    SearchSggt.style.display = "flex"
-
-})
-SearchDIn.addEventListener("focusout", () => {
-    SearchSggt.style.display = "none"
-})
-
-//To Show Search Bar Event Section 
-SearchSubBTN2.addEventListener("click", () => {
-
-    if (SearchSubBTN.style.display != "flex") {
-        SearchSubBTN.style.display = "flex"
-        SearchDIn.style.display = "flex"
-    } else {
-
-        SearchSubBTN.style.display = "none"
-        SearchDIn.style.display = "none"
-    }
-})
