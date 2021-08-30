@@ -43,7 +43,6 @@ let InstgramServ = document.getElementById("InstgramServ");
 let SearchDIn = document.getElementById("SearchDIn");
 let SearchSggt = document.getElementById("SearchSggt");
 let Help = document.getElementById("Help");
-let GiveMouseDetl = document.getElementById("GiveMouseDetl");
 let SearchSubBTN2 = document.getElementById("SearchSubBTN2");
 let SearchSubBTN = document.getElementById("SearchSubBTN");
 let NewVideoOnYT = document.getElementById("NewVideoOnYT");
@@ -56,10 +55,6 @@ WebName.textContent="GOOGLE";
 //Login and Sign Up BTN Text In
 Login.textContent="Login";
 SignUp.textContent="Sign Up";
-
-//Side Bar Data Input Section 
-//What Page Opened Indicator 
-FiveHomeIcon1.style.backgroundImage="url(../Files/home_icon.png)";
 
 //Array For Input Images In Side Bar Options
 let SideIconsArry = [SideIconsimg1 , SideIconsimg2 , SideIconsimg3 , SideIconsimg4 , SideIconsimg5 , SideIconsimg6 , SideIconsimg7 , SideIconsimg8 , SideIconsimg9 , SideIconsimg10, SideIconsimg11, SideIconsimg12, SideIconsimg13, SideIconsimg14, SideIconsimg15];
