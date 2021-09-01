@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+    user-select: none;
+}
+
+body {
+    background-color: #999;
+    overflow: hidden;
+}
+
+#Win {
+    background-image: url(../Files/WinBack.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#hoverItTop {
+    background-color: transparent;
+    width: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    position: fixed;
+    right: 0%;
+    top: 0;
+}
+
+#hoverItBottom {
+    background-color: transparent;
+    width: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    margin-right: auto;
+    position: fixed;
+    right: 0%;
+    bottom: 0;
+}
+
+/* #hoverItTop:hover{
+    background-color: white;
+}
+#hoverItBottom:hover{
+    background-color: white;
+} */
+
+#SideBar {
+    /* background-color: #111; */
+    width: 5.5rem;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: -7rem;
+    top: 0;
+    transition: 0.3s;
+    flex-direction: column;
+    z-index: 13;
+}
+
+.Boxes {
+    width: 100%;
+    height: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font: caption;
+    font-weight: 200;
+    font-size: 1rem;
+    color: rgb(165, 165, 165);
+}
+
+.Boxes:hover {
+    background-color: rgba(68, 68, 68, 0.76);
+}
+
+#TaskBar {
+    background-color: wheat;
+    width: 100%;
+    height: 2.5rem;
+    position: fixed;
+    bottom: 0%;
+    background-image: url(../Files/TaskBar.PNG);
+    background-position: center;
+    background-size: cover;
+}
+
+#DesktopIcons {
+    /* background-color: white; */
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 0.5rem;
+}
+
+.DeskIcons {
+    /* background-color: black; */
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0.2rem;
+}
+
+.DeskIcons:hover {
+    background-color: rgba(0, 172, 252, 0.205);
+}
+
+#DeskIconImg1 {
+    background-image: url(../Files/ThisPC.png);
+    background-position: center;
+    background-size: cover;
+    margin: 0;
+    width: 70%;
+    height: 70%;
+}
+
+#DeskIcon1txt {
+    color: white;
+    margin-top: 0.39rem;
+    font: caption;
+    font-weight: 300;
+    font-size: 0.79rem;
+}
+
+#DeskIcon2 {
+    background-image: url(../Files/ThisPC.png);
+    background-position: center;
+    background-size: cover;
+    margin-top: 2rem;
+}
+
+#DeskIcon3 {
+    background-image: url(../Files/ThisPC.png);
+    background-position: center;
+    background-size: cover;
+    margin-top: 2rem;
+}
