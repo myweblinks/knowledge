@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter PIN</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        position: relative;
+        z-index: 12;
+    }
+    
+    body {
+        background-color: black;
+    }
+    
+    #Sect {
+        width: 30rem;
+        height: 100vh;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(to bottom, rgb(221, 0, 255), blue);
+        background-repeat: no-repeat;
+        flex-direction: column;
+    }
+    
+    #PasswordInWIN {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient( to top, rgba(0, 0, 0, 0.382), rgba(161, 0, 164, 0.952));
+        border-radius: 5px;
+        width: 20rem;
+        height: 7rem;
+        flex-wrap: wrap;
+        margin-bottom: 2rem;
+        padding: 1rem;
+    }
+    
+    #PassChangeText {
+        color: rgb(255, 255, 255);
+        font: caption;
+        font-size: 1.3rem;
+        width: 100%;
+        height: auto;
+        font-weight: 600;
+        text-align: center;
+    }
+    
+    #PasswordByUser {
+        background-color: transparent;
+        outline: none;
+        padding: 0.2rem 0.6rem;
+        width: 8rem;
+        border-radius: 1.4rem;
+        color: white;
+    }
+    
+    #PasswordByUser::placeholder {
+        color: rgb(213, 212, 212);
+    }
+    
+    #UserPassEnterBTN {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+        outline: none;
+        border: 2px solid blue;
+        border-radius: 1.4rem;
+        padding: 0.2rem 0.6rem;
+        margin-left: 0.8rem;
+        color: white;
+    }
+    
+    #MainWin {
+        display: flex;
+        background-color: rgba(0, 0, 0, 0.333);
+        width: 19.8rem;
+        height: 22rem;
+        border-radius: 16px;
+        overflow: hidden;
+        flex-direction: column;
+    }
+    
+    #Status {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(20deg, #4072f2, rgb(208, 0, 255));
+        z-index: 18;
+    }
+    
+    #Message {
+        font: caption;
+        font-size: 2rem;
+        text-align: center;
+        font-weight: 600;
+        color: transparent;
+        text-transform: uppercase;
+        -webkit-text-stroke: 2px black;
+    }
+    
+    #DisplayMainContner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 5rem;
+    }
+    
+    .Circles {
+        border: 2px solid white;
+        width: 1rem;
+        height: 1rem;
+        border-radius: 100%;
+        margin: auto 0.7rem;
+    }
+    
+    #NumContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-top: 3px solid rgb(0, 0, 0);
+        width: 100%;
+        height: 17rem;
+        flex-wrap: wrap;
+        margin-top: auto;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+    
+    .Numbers {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid rgb(255, 255, 255);
+        width: 3rem;
+        height: 2.5rem;
+        margin: 0rem 1rem;
+        border-radius: 10px;
+        font: caption;
+        font-size: 0.9rem;
+        color: white;
+        transition: 0.5s;
+    }
+    
+    .OtherNumbers {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid rgb(255, 255, 255);
+        width: 3rem;
+        height: 2.5rem;
+        margin: 0rem 1rem;
+        border-radius: 10px;
+        font: caption;
+        font-size: 0.9rem;
+        color: white;
+        transition: 0.5s;
+    }
+    
+    .Numbers:hover {
+        background-color: rgba(16, 16, 16, 0.504);
+    }
+    
+    .OtherNumbers:hover {
+        background-color: rgba(16, 16, 16, 0.504);
+    }
+    
+    #Num10 {
+        border: none;
+    }
+    
+    #Num12 {
+        border: none;
+    }
+</style>
+
+<body>
+    <div id="Sect">
+        <div id="PasswordInWIN">
+            <p id="PassChangeText">Change your PIN.</p>
+            <input type="text" maxlength="4" minlength="4" placeholder="New PIN" id="PasswordByUser">
+            <button id="UserPassEnterBTN">Submit</button>
+        </div>
+        <div id="MainWin">
+            <div id="Status">
+                <p id="Message"></p>
+            </div>
+            <div id="DisplayMainContner">
+                <div id="Cir1" class="Circles"></div>
+                <div id="Cir2" class="Circles"></div>
+                <div id="Cir3" class="Circles"></div>
+                <div id="Cir4" class="Circles"></div>
+            </div>
+            <div id="NumContainer">
+                <div id="Num1" class="Numbers">1</div>
+                <div id="Num2" class="Numbers">2</div>
+                <div id="Num3" class="Numbers">3</div>
+                <div id="Num4" class="Numbers">4</div>
+                <div id="Num5" class="Numbers">5</div>
+                <div id="Num6" class="Numbers">6</div>
+                <div id="Num7" class="Numbers">7</div>
+                <div id="Num8" class="Numbers">8</div>
+                <div id="Num9" class="Numbers">9</div>
+                <div id="Num10" class="OtherNumbers"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="22px" fill="#fff"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M22 3H7c-.69 0-1.23.35-1.59.88L0 12l5.41 8.11c.36.53.9.89 1.59.89h15c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H7.07L2.4 12l4.66-7H22v14zm-11.59-2L14 13.41 17.59 17 19 15.59 15.41 12 19 8.41 17.59 7 14 10.59 10.41 7 9 8.41 12.59 12 9 15.59z"/></svg></div>
+                <div id="Num11" class="Numbers">0</div>
+                <div id="Num12" class="OtherNumbers"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#fff"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg></div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    let CirclesIDs = document.getElementsByClassName("Circles");
+    let AllNumbers = document.getElementsByClassName("Numbers");
+    let FilledCirCount = 0;
+    let Num10 = document.getElementById("Num10");
+    let Num12 = document.getElementById("Num12");
+    let Status = document.getElementById("Status");
+    let Message = document.getElementById("Message");
+    let DisplayMainContner = document.getElementById("DisplayMainContner");
+    let NumContainer = document.getElementById("NumContainer");
+    let aFamilyCounter = 0;
+    let a1 = null;
+    let a2 = null;
+    let a3 = null;
+    let a4 = null;
+    let UserPassEnterBTN = document.getElementById("UserPassEnterBTN");
+    let PasswordByUser = document.getElementById("PasswordByUser");
+    let aFamily = [a1, a2, a3, a4];
+    let aFamilyStr = "";
+    let aFamilyNum = null;
+    let aFamilyJSON = null;
+    let aFamilyJSONNum = null;
+
+    //Change your Passwords here
+    let PasswordMain = 0000;
+
+    let JSONPass = JSON.stringify(PasswordMain);
+    let SideA = null;
+
+    //When User Enter New Password
+    UserPassEnterBTN.addEventListener("click", () => {
+        if (PasswordByUser.value != "") {
+            PasswordMain = PasswordByUser.value
+        } else {
+            PasswordMain = 0000; //If the user doesn't enter any PIN but click on submit button then this PIN will work.
+        }
+    })
+
+    //For Loop
+    for (let i = 0; i < AllNumbers.length; i++) {
+        AllNumbers[i].addEventListener("click", () => {
+            if (FilledCirCount != 4) {
+                CirclesIDs[FilledCirCount].style.backgroundColor = "White";
+                aFamilyNum = Number(aFamily[FilledCirCount] = AllNumbers[i].textContent);
+                aFamilyStr += String(aFamilyNum);
+                aFamilyJSON = JSON.stringify(aFamilyStr);
+                aFamilyJSONNum = JSON.parse(aFamilyJSON);
+                console.log(aFamilyJSON)
+                FilledCirCount++;
+            } else {
+                FilledCirCount = 4;
+            }
+        });
+    };
+    Num10.addEventListener("click", () => {
+        if (FilledCirCount != 0) {
+            for (let i = 0; i < CirclesIDs.length; i++) {
+                CirclesIDs[i].style.backgroundColor = "Transparent";
+                aFamily[i] = '';
+            }
+            aFamilyStr = "";
+            aFamilyJSON = '';
+            FilledCirCount = 0;
+        } else {
+            FilledCirCount = 0;
+        }
+    });
+
+    Num12.addEventListener("click", () => {
+        if (PasswordMain != aFamilyJSONNum) {
+            DisplayMainContner.style.display = "none";
+            NumContainer.style.display = "none";
+            Status.style.display = "flex";
+            Message.textContent = "Wrong Password"
+            for (let i = 0; i < CirclesIDs.length; i++) {
+                CirclesIDs[i].style.backgroundColor = "Transparent";
+                aFamily[i] = '';
+            }
+            aFamilyStr = "";
+            aFamilyJSON = '';
+            FilledCirCount = 0;
+            setTimeout(() => {
+                DisplayMainContner.style.display = "flex";
+                NumContainer.style.display = "flex";
+                Status.style.display = "none";
+            }, 2500);
+        } else {
+            DisplayMainContner.style.display = "none";
+            NumContainer.style.display = "none";
+            Status.style.display = "flex";
+            Message.textContent = "Successfully Unlocked"
+            for (let i = 0; i < CirclesIDs.length; i++) {
+                CirclesIDs[i].style.backgroundColor = "Transparent";
+                aFamily[i] = '';
+            }
+            aFamilyStr = "";
+            aFamilyJSON = '';
+            FilledCirCount = 0;
+            setTimeout(() => {
+                DisplayMainContner.style.display = "flex";
+                NumContainer.style.display = "flex";
+                Status.style.display = "none";
+            }, 2500);
+        }
+    });
+</script>
+
+</html>
