@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Coins Counter</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        position: relative;
+        z-index: 12;
+    }
+    
+    body {
+        background-color: black;
+    }
+    
+    #sec {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+    }
+    
+    #Win {
+        background: linear-gradient(to bottom, rgb(255, 0, 166), rgb(255, 0, 255));
+        width: 20rem;
+        height: 18rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5%;
+        flex-direction: column;
+    }
+    
+    #NumberCounter {
+        background-color: red;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font: caption;
+        font-size: 1.4rem;
+        width: 80%;
+        height: 4rem;
+        font-family: monospace;
+    }
+    
+    #showRanNum {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(132, 255, 0);
+        padding: 0.5rem;
+        width: auto;
+        height: auto;
+        color: rgb(0, 64, 255);
+        font: caption;
+        font-size: 1.1rem;
+        margin-left: auto;
+        margin-right: 4rem;
+        margin-top: 1rem;
+        opacity: 0;
+    }
+    
+    .followersUp {
+        animation: followUpAni 0.5s 0s linear 1 both;
+    }
+    
+    @keyframes followUpAni {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    
+    .followersDown {
+        animation: followDownAni 0.5s 0s linear 1 both;
+    }
+    
+    @keyframes followDownAni {
+        from {
+            opacity: 1;
+        }
+        to {
+            opacity: 0;
+        }
+    }
+</style>
+
+<body>
+    <div id="sec">
+        <div id="Win">
+            <div id="NumberCounter">
+                Coins - 0
+            </div>
+            <div id="showRanNum">Coins 0</div>
+        </div>
+    </div>
+</body>
+<script>
+    function RanGntr() {
+        let gntRan = Math.round(minRan + (maxRan - minRan) * Math.random());
+        let a = 0;
+        showRanNum.className = "followersUp";
+        setTimeout(() => {
+            showRanNum.className = "followersDown";
+
+        }, 1600);
+        showRanNum.textContent = `Coins +${gntRan}`
+        setInterval(() => {
+            if (a != gntRan) {
+                FinalNum++;
+                NumberCounter.textContent = `Coins - ${FinalNum}`;
+                a++;
+            } else {}
+        }, 100);
+    }
+
+    let FinalNum = null;
+    let NumberCounter = document.getElementById("NumberCounter");
+    let showRanNum = document.getElementById("showRanNum");
+    let minRan = 1;
+    let maxRan = 10;
+
+    setInterval(RanGntr, 1800);
+</script>
+
+</html>
